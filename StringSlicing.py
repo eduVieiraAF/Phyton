@@ -1,6 +1,7 @@
-# slicing is to create a substring by extracting elements from another string
-#   indexing[] or slice()
-#   [start:stop:step]
+# slicing is to create a substring by extracting elements from another 
+#   string
+#       indexing[] or slice()
+#       [start:stop:step]
 
 name = "Eduardo Vieira"
 first_name = name[0:8]
