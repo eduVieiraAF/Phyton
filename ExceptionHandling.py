@@ -21,7 +21,7 @@ except Exception as e:
 else:
     print(result)
     
-# ! Recommended to use this finally block?
+# ! Recommended to use this finally block
 finally:
 # * Close files or end any code block
     print("Have a a nice day")
