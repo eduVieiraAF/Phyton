@@ -1,7 +1,7 @@
 #2D list is a list of lists aka multi-dimensional list
 
 drinks = ["beer", "whiskey", "wine", "gin", "rum", "coffee", "soda"]
-dinner = ["lasgna", "chicken stew", "steak", "pizza", "burger"]
+dinner = ["lasagna", "chicken stew", "steak", "pizza", "burger"]
 dessert = ["ice-cream", "pudding", "fudge cake"]
 
 food = [drinks, dinner, dessert]
