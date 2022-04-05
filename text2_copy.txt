@@ -1,3 +1,0 @@
-A simple way to write files
- using Python.
-New text with append.
