@@ -25,6 +25,6 @@ if (len(word1) == len(word2)):
 # if strings's lenght are not the same, they're not an anagram
 else:
     
-    print(word1.capitalize() + " and " + word2 + " are NOT anagram.")
+    print(word1.capitalize() + " and " + word2 + " are NOT an anagram.")
     
 print()
