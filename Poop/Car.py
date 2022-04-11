@@ -13,4 +13,4 @@ class Car:
         print("The " + self.model +" is moving")
     
     def stop(self):
-        print("The " + self.model +" pulling over")
+        print("The " + self.model +" is pulling over")
