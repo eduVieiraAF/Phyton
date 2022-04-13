@@ -1,13 +1,13 @@
-from mailbox import NotEmptyError
-
 
 class Car: 
+    
+    wheels = 4 #class vairable
          
     def __init__(self, make, model, year, color):
-        self.make = make
-        self.model = model
-        self.year = year
-        self.color = color
+        self.make = make  # instance variable
+        self.model = model # instance variable
+        self.year = year # instance variable
+        self.color = color # instance variable
     
     def drive(self):
         print("The " + self.model +" is moving")
