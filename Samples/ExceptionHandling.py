@@ -1,4 +1,5 @@
-# events that interrupt the flow of your code
+
+#* events that interrupt the flow of your code
 
 try:
     numerator = int(input("Enter a number to divide: "))
