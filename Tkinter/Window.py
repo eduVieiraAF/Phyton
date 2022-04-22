@@ -1,6 +1,4 @@
-from logging import root
 import tkinter as tk
-from turtle import heading, width
 
 window1 = tk.Tk()
 window1.title('Window 1 → centered')
