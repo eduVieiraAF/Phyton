@@ -35,3 +35,12 @@ window3.geometry('600x400+180+120')
 window3.attributes('-alpha', 0.7)
 
 window3.mainloop()
+
+window4 = tk.Tk()
+
+window4.title('Window 4 - with personalized icon')
+window4.geometry('1000x400+150+150')
+window4.resizable(False, True)
+window4.iconbitmap('./Tkinter/Phoenix.ico')
+
+window4.mainloop()
