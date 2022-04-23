@@ -1,4 +1,4 @@
-from time import sleep, time
+from time import sleep
 
 base = int(input("Enter a number: "))
 for x in range (1, 11):

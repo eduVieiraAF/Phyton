@@ -1,3 +1,4 @@
+from time import sleep
 counter = 0
 max = 5
 
@@ -10,7 +11,7 @@ while counter < max:
 print('--  type QUIT to exit --')
 
 while True:
-    color = input('Enter your favorite color: ')
+    color = input(''quit' or get stuck:')
     if color.lower() == 'quit':
         break
 
