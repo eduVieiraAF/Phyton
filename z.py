@@ -11,7 +11,7 @@ while counter < max:
 print('--  type QUIT to exit --')
 
 while True:
-    color = input(''quit' or get stuck:')
+    color = input('\'quit\' or get stuck:')
     if color.lower() == 'quit':
         break
 
