@@ -1,4 +1,5 @@
 from time import sleep
+
 counter = 0
 max = 5
 
@@ -11,8 +12,8 @@ while counter < max:
 print('--  type QUIT to exit --')
 
 while True:
-    color = input('\'quit\' or get stuck:')
-    if color.lower() == 'quit':
+    quit = input('\'quit\' or get stuck:')
+    if quit == 'quit':
         break
 
 name = ""
@@ -24,5 +25,5 @@ while name == "":
         print("Cannot leave field empty.")
     
     elif name == "Edu":
-        print("Nice name!")
+        print("Nice name! Good-bye")
 
