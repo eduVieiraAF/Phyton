@@ -5,7 +5,7 @@ print("The {} is going down the {}.".format(vehicle, path))
 print("The {1} is going down the {0}.".format(vehicle, path)) #can define positions
 print("The {car} is going down the {road}.".format(car="Toyota", road = "middle lane")) #can use keywords
 
-# a more elegant way now
+# a more elegant way nowc
 print()
 line = "The {} is going down the {}."
 print(line.format(vehicle, path))
