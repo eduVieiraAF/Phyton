@@ -53,6 +53,5 @@ print()
 # using if
 if 21 in student:
     
-    print("Student is allowed to drink")change the 
-#? elements of a tuple once it is assigned whereas we can change the elements of a list.
+    print("Student is allowed to drink")
 

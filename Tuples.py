@@ -1,6 +1,7 @@
 # A tuple is an oredered and unchangeable collection so we can group related data
 
 # instead of [] as in lists we use ()
+
 student = ("Edu", 21, "Male")
 
 print(student)
