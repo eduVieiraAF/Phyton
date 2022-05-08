@@ -17,7 +17,7 @@ utensils.update(dishes) # adds all the items to a new set
 print(utensils)
 print()
 
-##utensils.clear()isso
+##utensils.clear()
 ##print(utensils)
 ##print()
 
