@@ -31,7 +31,7 @@ print()
 food.clear() # removes all of the elements
 print(food)
 
-#? A tuple is an oredered and unchangeable collection so we can group related data
+#? A tuple is an  unchangeable collection so we can group related data
 
 # instead of [] as in lists we use ()
 
@@ -55,14 +55,16 @@ if 21 in student:
     
     print("Student is allowed to drink")
 
-# a set is a collection that is unsorted, unindexed and does not allow duplicate values
+print()
+
+#? a set is a collection that does not allow duplicate values
 
 
 utensils = {"fork", "spoon", "knife", "mug"}
 dishes = {"bowl", "plate", "mug"}
 dinner_table = utensils.union(dishes) # joins both sets
 
-print(utensils)
+print(dinner_table)
 print()
 
 utensils.add("ladle")
@@ -72,13 +74,6 @@ print()
 
 utensils.update(dishes) # adds all the items to a new set
 print(utensils)
-print()
-
-##utensils.clear()
-##print(utensils)
-##print()
-
-print (dinner_table)
 print()
 
 print(utensils.difference(dishes)) # display what one has and other doesn't
