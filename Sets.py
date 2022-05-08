@@ -1,7 +1,5 @@
 # a set is a collection that is unsorted, unindexed and does not allow duplicate values
 
-from re import X
-
 
 utensils = {"fork", "spoon", "knife", "mug"}
 dishes = {"bowl", "plate", "mug"}
