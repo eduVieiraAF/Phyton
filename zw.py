@@ -1,113 +1,45 @@
 
-#? Collections are often referred to as iterables
+#? Functions
 
-#? Lists
+def absolute_value(num):
+    """This function returns the absolute
+    value of the entered number"""
 
-food = ["pizza", "sushi", "burgers", "tacos", "spaghetti"]
-
-print(food) #prints entire list
-print(food[0]) #prints out the 1st element
-print()
-
-food[0] = "hotdog" #change index 0 value
-print(food[0])
-print()
-
-for x in food:
-    print(x)
-
-print()
-
-# Functions
+    if num >= 0:
+        return num
+    else:
+        return -num
 
 
-food.append("pudding") # adds an element
-food.remove("tacos") # adios to tacos
-food.pop # removes last element
-food.insert(0, "shrimp") # adds element to a specific index
-food.sort() # in alphabetical order
+print(absolute_value(2))
+print(absolute_value(-4))
 
-for x in food:
-    print(x)
+id = 240
+student_name = []
+student_age = []
+student_course = []
+student_id =[]
 
-print()
-food.clear() # removes all of the elements
-print(food)
+def enroll():
+    num = int(input("How many students are you enrolling? "))
+        
+    for i in range(1, num + 1):
+        student_name.append(input("Name: "))
+        student_age.append(input("Age: "))
+        student_course.append(input("Course: "))
+        student_id.append(id + i)
+        print()
 
-#? A tuple is an unchangeable collection so we can group related data
-
-# instead of [] as in lists we use ()
-
-student = ("Edu", 21, "Male")
-
-print(student)
-# counts how many time a value appears
-print("Edu appears " + str(student.count("Edu")) + " times") 
-# shows the index of desired item
-print("The age is located at index " + (str(student.index(21))))
-print(len(student))
-print()
-
-
-# with a for loop
-for i in student:
-    print(i)
-
-print()
-
-# using if
-if 21 in student:
+def report():
+    print("Students enrolled today →")
+    print("--------------------------------------------------------------------")
     
-    print("Student is allowed to drink")
-
-print()
-
-#? a set is a collection that does not allow duplicate values and element reassignment
-
-utensils = {"fork", "spoon", "knife", "chopsticks"}
-dishes = {"bowl", "plate", "mug"}
-dinner_table = utensils.union(dishes) # joins both sets
-
-print(dinner_table)
-print()
-
-utensils.add("ladle")
-utensils.remove("knife")
-print(utensils)
-print()
-
-utensils.update(dishes) # adds all the items to one of the sets
-print(utensils)
-print()
-
-print(utensils.difference(dishes)) # display what one has and other doesn't
-print(utensils.intersection(dishes)) # displays what they have in common
-dinner_table.clear() #removes all items
-
-# a dictionary is a changeable, unordered collection of unique keys/value pair
-# which is fast because they use hashing. Similar to set
-
-capitals = {'USA': 'Washinton DC', 
-            "Brazil": "Brasilia", 
-            "India": "New Dehli", 
-            "Canada": "Ottawa", 
-            "Australia": "Canberra",
-            "Russia": "Moscow"}
-
-print(capitals["Australia"])
-print(capitals.get('Japan')) # safer way to access dictionaries
-print(capitals.keys()) # prints keys, not values
-print(capitals.values()) # prints all values
-print(capitals.items()) # prints keys and values
-
-capitals.update({"Germany": "Berlin"}) # can add new item
-capitals.update({'India': 'Dehli'}) # or alter existing value
-capitals.pop("USA") # removes item
-
-print()
-
-for key, value in capitals.items():
-    print(key, value)
-
-print()
-capitals.clear() # deletes every item
+    for i in range(0, len(student_id)):
+        
+        print("Student id → " + str(student_id[i]) + ", name: "
+              + str(student_name[i]) + ", " + str(student_age[i]) + " attending the "
+              + str(student_course[i]) + " course.")
+        print("••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••")
+        
+enroll()
+report()
