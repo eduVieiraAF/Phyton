@@ -1,0 +1,4 @@
+
+#? windows → serves as a container to hold widgets
+#? widgets → GUI elements such as buttons, textboxes, labels, images
+
