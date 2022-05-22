@@ -1,6 +1,6 @@
 
 #? map() applies a function to each item in iterable (list, tuple, etc)
-# ma(function, iterable)
+# map(function, iterable)
 
 store = [("shirt", 20.00),
          ("pants", 27.00),
