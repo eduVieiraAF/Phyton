@@ -16,8 +16,8 @@ multiply = lambda x, y: x * y
 print(multiply(10,11))
 print()
 
-full_name = lambda first_name, last_name: first_name + " " + last_name
-print(full_name("edu", "Vieira").capitalize())
+full_name = lambda first_name, last_name: first_name.capitalize() + " " + last_name.capitalize()
+print(full_name("edu", "Vieira"))
 print()
 
 # Filtering out only the even items from a list
