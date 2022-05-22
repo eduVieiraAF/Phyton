@@ -44,7 +44,7 @@ def display_score(correct_guesses, guesses):
     print("RESULTS")
     print("---------------------------")
     
-    print("Answeres: ", end="")
+    print("Answers: ", end="")
     for i in questions:
         
         print(questions.get(i), end=" ")
@@ -86,8 +86,8 @@ questions = {
 #* 2-D list
 options = [["A. Guido van Rossum", "B. Elon Musk", "C. Bill Gates", "D. Mark Zuckerberg"],
         ["A. 1989", "B. 1991", "C. 2001", "D. 2016"],
-        ["A. Lonely Island", "B. Smosh", "C. Monty Python", "Dr. SNL"],
-        ["A. True", "B. False", "C. Sometimes", "It is actually hollow"]]
+        ["A. Lonely Island", "B. Smosh", "C. Monty Python", "D. Dr. SNL"],
+        ["A. True", "B. False", "C. Sometimes", "D. It is actually hollow"]]
 
 new_game()
 
