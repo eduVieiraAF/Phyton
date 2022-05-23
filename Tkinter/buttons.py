@@ -5,6 +5,11 @@ count = 0
 
 def click():
     global count
+    if count == 10:
+        print("Jesus! How many more times ya gon' click!?")
+    
+    if count == 20:
+        print("Are you kidding me??")
     count += 1
     print("You've clicked {} times.".format(count))
 
