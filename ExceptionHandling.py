@@ -5,8 +5,7 @@ try:
     numerator = int(input("Enter a number to divide: "))
     demoninator = int(input("Enter a number to divide by: "))
     result = numerator / demoninator
-    
-    
+       
 except ZeroDivisionError as e:
     print(e)
     print ("Numbers cannot be divided by ZERO.")
