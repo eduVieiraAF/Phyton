@@ -7,9 +7,9 @@ def display():
     else:
         print("How dare you!?")
 
-window = Tk() 
-window.title("Phoenix code")
-window.iconbitmap('./Tkinter/Phoenix.ico')
+window = Tk()
+window.title("Python code")
+window.iconbitmap('./Tkinter/python.ico')
 window.config(background="#111111")
 
 x = IntVar()
