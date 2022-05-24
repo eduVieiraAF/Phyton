@@ -16,8 +16,8 @@ print(last_name)
 print(funny_sliced_name)
 print(reversed_name)
 
-website1 = "http://orkut.com"
-website2 = "http://humortadela.com"
+website1 = "http://tastyrecipes.com"
+website2 = "http://facebook.com"
 
 slice = slice(7,-4) #negative indexing as to eliminate the .com portion
 
