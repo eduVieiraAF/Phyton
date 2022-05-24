@@ -1,0 +1,39 @@
+from tkinter import *
+
+def display():
+    if (x.get() == 1):
+        print("You have agreed → Good luck!")
+    
+    else:
+        print("How dare you!?")
+
+window = Tk() 
+window.title("Phoenix code")
+window.iconbitmap('./Tkinter/Phoenix.ico')
+window.config(background="#111111")
+
+x = IntVar()
+
+py = PhotoImage(file='./Tkinter/python.png')
+
+check_button = Checkbutton(
+    window,
+    text="I agree to this document without reading it",
+    variable=x,
+    onvalue=1,
+    offvalue=0,
+    command=display,
+    fg="#ff552a",
+    bg="#111111",
+    font=("Arial", 20),
+    activebackground="#414040",
+    activeforeground="#f6c9aa",
+    padx=25,
+    pady=15,
+    image=py,
+    compound="right"
+)
+
+check_button.pack()
+
+window.mainloop() 
