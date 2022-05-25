@@ -3,6 +3,12 @@ from tkinter import *
 from turtle import left
 
 def submit():
+    if scale.get() < 0:
+        print("Freezing...")
+    
+    if scale.get() > 35:
+        print("Turn on the AC...")
+    
     print("The temperature is currently {}º C.". format(scale.get()))
 
 window = Tk()
