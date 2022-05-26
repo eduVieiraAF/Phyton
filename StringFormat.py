@@ -23,3 +23,6 @@ print("Hey, I'm {:>6} Good to meet you".format(name))
 print("Hey, I'm {:^6} Good to meet you".format(name)) 
 # name will be in the centre of spaces
 
+print()
+
+print("{:=^60}".format("•Python•"))
