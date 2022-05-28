@@ -53,7 +53,7 @@ def click():
                     messagebox.showinfo("F«»k!", message="Get atta here!")
                 
             else:
-                messagebox.showwarning("Pussy", message="You're WEAK!", Icon="error")
+                messagebox.showwarning("Pussy", message="You're WEAK!")
     
 
 button = Button(
