@@ -1,13 +1,8 @@
-from cgitb import text
-from msilib.schema import Icon
-from os import kill
-from tkinter import Tk, font, messagebox, Button
-from turtle import bgcolor
-
-from setuptools import Command
+from tkinter import Tk, messagebox, Button
 
 window = Tk()
 window.title("Python coding by Edu")
+window.geometry("350x150")
 window.iconbitmap('./Tkinter/python.ico')
 
 def click():
@@ -55,7 +50,6 @@ def click():
             else:
                 messagebox.showwarning("Pussy", message="You're WEAK!")
     
-
 button = Button(
     window,
     command=click, 
