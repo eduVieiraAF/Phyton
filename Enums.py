@@ -1,5 +1,4 @@
 from enum import Enum
-import enum
 
 class Day(Enum):
     
@@ -10,3 +9,11 @@ class Day(Enum):
 print(Day.MONDAY)
 print(Day.TUESDAY.name)
 print(Day.WEDNESDAY.value)
+
+fav_day = Day.WEDNESDAY.name 
+
+if fav_day == "WEDNESDAY":
+    print("True")
+
+else:
+    print("False")
