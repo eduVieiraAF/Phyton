@@ -1,7 +1,4 @@
-
-
 from ast import Break
-
 
 while True:
     nome = input("Digite um nome: ").upper()
@@ -15,9 +12,7 @@ while True:
     elif nome == "CAMILA":
         print("HELLOOOOOOOOOOOO!")
     
-    elif nome == "YUKARI":
-        
-        
+    elif nome == "YUKARI":        
         print("Nome em Joãoponeis")
     
     elif nome == "BYE":

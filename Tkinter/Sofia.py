@@ -1,8 +1,6 @@
 from cProfile import label
-from email import message
 from tkinter import *
 from tkinter import messagebox
-from turtle import title
 
 def click():
     txt = entry.get().upper()
