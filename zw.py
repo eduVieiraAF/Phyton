@@ -37,10 +37,10 @@ pi = 3.14159265359
 # print(format(255, 'X'))
 # print(format(0.5, '%'))
 
-#* More refined formatting
+#? More refined formatting
 
 num1 = 3.14159
-num2 = 1000
+num2 = 10_050_150
 num3 = 0.5
 
 print("Pi is {:.2f}".format(num1)) # displays 2 digits
@@ -64,7 +64,6 @@ print("Hey, I'm {:>6} Good to meet you".format(name))
 print("Hey, I'm {:^6} Good to meet you".format(name)) 
 # name will be in the centre
 
-
 # slicing is to create a substring by extracting elements from another 
 #   string_indexing[] or slice()
 #       [start:stop:step]
@@ -85,7 +84,7 @@ print(reversed_name)
 website1 = "http://tastyrecipes.com"
 website2 = "http://facebook.com"
 
-slice = slice(7,-4) #negative indexing as to eliminate the .com portion
+sliced = slice(7,-4) #negative indexing as to eliminate the .com portion
 
-print(website1[slice])
-print(website2[slice])
+print(website1[sliced])
+print(website2[sliced])
