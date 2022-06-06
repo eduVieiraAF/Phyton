@@ -82,8 +82,9 @@ for i in sorted_students:
 
 message = "Code, drink coffee, eat, sleep, repeat"
 
-print(message.startswith('Code')) # output: True
-print(message.endswith('repeat')) # output: True
+print(message.startswith("Code")) # output: True
+print(message.endswith("repeat")) # output: True
+print(message.endswith("back")) # output: false
 
 def web_slice(site: str):
     slice_www = slice(4,-4)
@@ -110,3 +111,17 @@ website4 = "http://aussiemilfs.com"
 
 print(web_slice(website3))
 print(web_slice(website4))
+
+# Capitalize every other char
+
+word = input("Enter any word: ")
+out = ""
+
+for i in range(len(word)):
+    if i % 2 == 1:
+        out += word[i].upper()
+    else:
+        out += word[i]
+        
+print(out)
+
