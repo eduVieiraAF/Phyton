@@ -1,7 +1,7 @@
 import string
 import random
 
-chars = list(string.ascii_lowercase + string.ascii_uppercase + string.digits + "!@#$%&*_-")
+chars = list(string.ascii_lowercase + string.ascii_uppercase + string.digits + "!@#$%&*_-.")
 password = []
 
 for i in range(0,12):
