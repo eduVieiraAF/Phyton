@@ -2,7 +2,11 @@ import statistics
 
 #? Harmonic mean
 
-# Harmonic mean = The reciprocal of the arithmetic mean() of the reciprocals of the data.
+#* The statistics.harmonic_mean() method calculates the 
+#* harmonic mean (central location) of the given data set.
+
+# Harmonic mean = The reciprocal of the arithmetic mean() 
+# of the reciprocals of the data.
 
 # The harmonic mean is calculated as follows:
 # If you have four values (a, b, c and d) →
