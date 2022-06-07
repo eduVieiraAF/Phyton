@@ -12,3 +12,5 @@ import statistics
 print(statistics.median_high([1, 3, 5, 7, 9, 11, 13]))
 print(statistics.median_high([1, 3, 5, 7, 9, 11]))
 print(statistics.median_high([-11, 5.5, -3.4, 7.1, -9, 22]))
+
+#* Also → statistics.median_low() method calculates the low median of the given data set.
