@@ -1,4 +1,3 @@
-from ctypes.wintypes import PINT
 from Car import Car
 
 car_1 = Car("Chevy", "Corvette", 2021, "blue")
