@@ -1,127 +1,71 @@
 
-#* sort() method is used with lists
-#* sort() function is used with iterables
-# does not work with tuples
+#? filter() creates a collection of elements from an iterable for which a function returns true
+# filter(function, iterable)
 
-students = ["Squidward", "Sandy", "Patrick", "SpongeBob", "Mr. Krabs"]
-
-students.sort()
-
-print("Student list in alphabetical order →")
-for i in students:
-    print(i)
-    
-print()
-
-print("Reversed student list →")
-students.sort(reverse=True)
-
-for i in students:
-    print(i)
-    
-print()
-
-print("Working with tuples →")
-
-sorted_students = sorted(students)
-
-for i in sorted_students:
-    print(i)
-    
-print()
-
-reversed_students = sorted(students, reverse=True)
-
-print("Reversed student tuple →")
-
-for i in sorted_students:
-    print(i)
-    
-print()
-
-#? Level 2
-
-students = [
-    ("Squidward", "F", 60),
-    ("Sandy", "A", 33),
-    ("Patrick", "D", 29),
-    ("Spongebob", "B", 21),
-    ("Mr. Krabs", "C", 61)
+friends = [
+        ("Rachel", 19),
+        ("Monica", 17),
+        ("Ross", 18),
+        ("Chandeller", 18),
+        ("Phoebe", 16),
+        ("Joey", 22),
+        ("Gunther", 21),
+        ("Ben", 3),
+        ("Mr. Heckles", 35),
+        ("Mike", 17)
     ]
 
-students.sort() #sorts by 1st column b default
+age = lambda data: data[1] >= 18
 
-for i in students: 
-    print(i)
+drinking_buddies = list(filter(age, friends))
 
-print()
+print(str(len(drinking_buddies)) + " are invited:")
 
-#* LAMBDA → lambda parameter: expression
-
-print("Sorted by grades →")
-
-sorted_students = students
-grade = lambda grades:grades[1] # → use 2 to sort by age
-sorted_students.sort(key = grade)
-
-for i in sorted_students:
-    print(i)
-
-print()
-print("Sorted by grades, only reversed →")
-
-sorted_students.sort(key = grade, reverse=True)
-
-for i in sorted_students:
-    print(i)
+for i in drinking_buddies:
+    print()
+    print("{} is {}, therefore is invited to the pub.".format(i[0], i[1]))
+    
     
 
+#* INHERITANCE 
 
-# * starstWith() checks if a string starts with certain characters
-# * endsWith() checks if as string ends with certain characters
-
-message = "Code, drink coffee, eat, sleep, repeat"
-
-print(message.startswith("Code")) # output: True
-print(message.endswith("repeat")) # output: True
-print(message.endswith("back")) # output: false
-
-def web_slice(site: str):
-    slice_www = slice(4,-4)
-    slice_www_extra = slice(4,-7)
-    slice_http = slice(7,-4)
-    slice_http_extra = slice(7,-7)
+#* PARENT CLASS
+class Animal:
     
-    if site.startswith("www"):
-        if site.endswith("com"):
-            return site[slice_www]
-        
-        else:
-            return site[slice_www_extra]
+    alive = True
     
-    elif site.startswith("http"):
-        if site.endswith("com"):
-            return site[slice_http]
+    def eat(self):
+        print("This animal is eating.")
         
-        else:
-            return site[slice_http_extra]
+    def sleep(self):
+        print("This animal is sleeping.")
+    
 
-website3 = "www.asshat.com.au"
-website4 = "http://aussiemilfs.com"
+#! ---------------------------------------------------------------------------------------
+#* Child classes
+class Rabbit(Animal):
+    def hop(self):
+        print("This rabbit is hopping.")
 
-print(web_slice(website3))
-print(web_slice(website4))
+class Fish(Animal):
+    def swim(self):
+        print("This fish is swimming.")
 
-# Capitalize every other char
+class Hawk(Animal):
+    def fly(self):
+        print("This hawk is flying.")
 
-word = input("Enter any word: ")
-out = ""
+#* End of subclasses
+#! ---------------------------------------------------------------------------------------
 
-for i in range(len(word)):
-    if i % 2 == 1:
-        out += word[i].upper()
-    else:
-        out += word[i]
-        
-print(out)
+rabbit = Rabbit()
+fish = Fish()
+hawk = Hawk()
+
+print(rabbit.alive)
+rabbit.eat()
+rabbit.hop()
+fish.swim()
+hawk.sleep()
+hawk.fly()
 
