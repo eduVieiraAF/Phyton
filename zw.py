@@ -26,46 +26,32 @@ for i in drinking_buddies:
     print("{} is {}, therefore is invited to the pub.".format(i[0], i[1]))
     
     
+#? OOP Intro - Python is an object oriented programming language.
 
-#* INHERITANCE 
+#* Python Classes/Objects
 
-#* PARENT CLASS
-class Animal:
-    
-    alive = True
-    
-    def eat(self):
-        print("This animal is eating.")
-        
-    def sleep(self):
-        print("This animal is sleeping.")
-    
+# Almost everything in Python is an object, with its properties and methods.
 
-#! ---------------------------------------------------------------------------------------
-#* Child classes
-class Rabbit(Animal):
-    def hop(self):
-        print("This rabbit is hopping.")
+# A Class is like an object constructor, or a "blueprint" for creating objects.
 
-class Fish(Animal):
-    def swim(self):
-        print("This fish is swimming.")
+class MyClass:
+    x = 5
 
-class Hawk(Animal):
-    def fly(self):
-        print("This hawk is flying.")
+obj1 = MyClass() # created a MyClass() object
+print(obj1.x)
 
-#* End of subclasses
-#! ---------------------------------------------------------------------------------------
+result = 2 * obj1.x
 
-rabbit = Rabbit()
-fish = Fish()
-hawk = Hawk()
+print(result)
 
-print(rabbit.alive)
-rabbit.eat()
-rabbit.hop()
-fish.swim()
-hawk.sleep()
-hawk.fly()
+# _init-() is used to assign values to object properties or methods
 
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+p1 = Person("John", 36)
+
+print(p1.name)
+print(p1.age)
