@@ -1,6 +1,3 @@
-from turtle import color
-
-
 class Car:
     color = None
 
