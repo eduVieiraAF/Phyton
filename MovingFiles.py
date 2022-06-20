@@ -20,5 +20,3 @@ except FileNotFoundError:
     print("File not found")
     
 # * we can move directories using the code above too, too
-
-

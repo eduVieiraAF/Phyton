@@ -6,5 +6,3 @@
 import shutil
 
 shutil.copyfile('test2.txt', 'text2_copy.txt') # source, destination/create file's name
-
-# *other methods use the same 2 arguments as well. 

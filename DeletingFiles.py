@@ -9,7 +9,7 @@ try:
     shutil.rmtree(path) # ! removes folder and all files within it
     
 except FileNotFoundError:
-    print("File not founs")
+    print("File not found")
 
 except PermissionError:
     print("You cannot delete folder")

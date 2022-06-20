@@ -1,57 +1,94 @@
+# Python Program to Check Number is Divisible by 5 and 11
 
-#? filter() creates a collection of elements from an iterable for which a function returns true
-# filter(function, iterable)
+# this python program allows users to enter any integer value. Next, 
+# this Python program checks whether the given number is divisible by both 5 and 11 using If Else.
 
-friends = [
-        ("Rachel", 19),
-        ("Monica", 17),
-        ("Ross", 18),
-        ("Chandeller", 18),
-        ("Phoebe", 16),
-        ("Joey", 22),
-        ("Gunther", 21),
-        ("Ben", 3),
-        ("Mr. Heckles", 35),
-        ("Mike", 17)
-    ]
+number = int(input(" Please Enter any Positive Integer: "))
 
-age = lambda data: data[1] >= 18
-
-drinking_buddies = list(filter(age, friends))
-
-print(str(len(drinking_buddies)) + " are invited:")
-
-for i in drinking_buddies:
-    print()
-    print("{} is {}, therefore is invited to the pub.".format(i[0], i[1]))
+if((number % 5 == 0) and (number % 11 == 0)):
+    print(" {} is divisible by 5 and 11".format(number))
+else:
+    print(" {} is NOT divisible by 5 and 11".format(number))
     
+# Simple Interest = (Principal Amount x Rate of Interest x Number of years) divided by 100
+
+# Python Program to Calculate Simple Interest
+
+# This Python program allows users to enter the Principal Amount, ROI, and Number of years. By using those values, 
+# the program calculates Simple Interest using the above-specified formula.
+
+princ_amount = float(input(" Please Enter the Principal Amount: "))
+rate_of_int = float(input(" Please Enter the Rate Of Interest: "))
+time_period = float(input(" Please Enter Time period in Years: "))
+
+simple_interest = (princ_amount * rate_of_int * time_period) / 100
+
+print("Simple Interest for Principal Amount {0} = {1}".format(princ_amount, simple_interest))
+
+
+# * Opening and reading a file
+# * file is within my folder or else I'd need the entire path
+# * with open will automatically close file
+
+try:
+    with open('test.txt') as file:
+        print(file.read())
+
+except FileNotFoundError:
+    print("File not found")
     
-#? OOP Intro - Python is an object oriented programming language.
+# * it is good practice to sound the code with try and except
 
-#* Python Classes/Objects
 
-# Almost everything in Python is an object, with its properties and methods.
+# * copyfile() = copies the content of a file
+# * copy() = copyfile() + permission mode + directory or destination
+# * copy2() = copy + copies metadata (file's creation and modificaition times)
 
-# A Class is like an object constructor, or a "blueprint" for creating objects.
+import shutil
 
-class MyClass:
-    x = 5
+shutil.copyfile('test2.txt', 'text2_copy.txt') # source, destination/create file's name
 
-obj1 = MyClass() # created a MyClass() object
-print(obj1.x)
 
-result = 2 * obj1.x
+import os
 
-print(result)
+source = "C:\\Users\\edu_v\\Python\\file.txt"
+destination = "C:\\Users\\edu_v\\IdeaProjects\\Kotlin Programming\\file_moved.txt" # can rename file
 
-# _init-() is used to assign values to object properties or methods
+try:
+    
+    if os.path.exists(destination):
+        
+        print("File already exists within folder")
+    
+    else:
+        
+        os.replace(source, destination)
+        print("File was successfully moved from:\n" + source + "to: " + destination)
+            
+except FileNotFoundError:
+    
+    print("File not found")
+    
+# * we can move directories using the code above too, too
 
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+import os
+import shutil
 
-p1 = Person("John", 36)
+path = 'text2_copy.txt'
 
-print(p1.name)
-print(p1.age)
+try:
+    os.remove(path) # ! Does not remove folder/directories
+    os.rmdir # * to remove directories which doesn't contain files
+    shutil.rmtree(path) # ! removes folder and all files within it
+    
+except FileNotFoundError:
+    print("File not found")
+
+except PermissionError:
+    print("You cannot delete folder")
+
+except OSError:
+    print("You cannot delete folder that contain files")
+    
+else:
+    print (path, "delete succefully.")

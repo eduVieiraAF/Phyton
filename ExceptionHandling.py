@@ -16,7 +16,7 @@ except ValueError as e:
     
 except Exception as e:
     print(e)
-    print("Something else went wrong :(")
+    print("Something else went wrong.")
 
 else:
     print(result)
