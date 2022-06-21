@@ -20,7 +20,7 @@ window.iconbitmap('./Tkinter/python.ico')
 
 button = Button(
     text="Open\nfile",
-    font=("Arial", 14),
+    font=("Segoe UI Semibold", 12),
     command=open_file
 )
 
