@@ -34,12 +34,17 @@ class Member:
 #! --------------------------------------------------------------------------------
 
 m1 = Member("Janet Blunt", 1, Gym_plans.DAILY)
-
 print (
-        m1.name + "\n••••••••••••••••••••••••••••••••••••••••••••••••" +
+        m1.name + "\n••••••••••••••••••••••••••••••••••••••••••••••••••••••••" +
         "\n\t member ID →" + str(m1.id) + 
         "\n\t Plan → " + m1.plan.name + 
         " - detail: " + m1.plan.value    
         )
 
-
+m2 = Member("Glenn Webb", 2, Gym_plans.PREMIUM)
+print (
+        m1.name + "\n••••••••••••••••••••••••••••••••••••••••••••••••••••••••" +
+        "\n\t member ID →" + str(m2.id) + 
+        "\n\t Plan → " + m2.plan.name + 
+        " - detail: " + m2.plan.value    
+        )
