@@ -1,50 +1,55 @@
-from enum import Enum
+# Open and reading a file
 
-class Day(Enum):
+file = open("test.txt", "r")
+
+print(file.read())
+
+file.close()
+
+# * with open will automatically close file
+
+try:
+    with open('test.txt') as file:
+        print(file.read())
+
+except FileNotFoundError:
+    print("File not found")
     
-    MONDAY = 1
-    TUESDAY = 2
-    WEDNESDAY = 3
-    
-print(Day.MONDAY)
-print(Day.TUESDAY.name)
-print(Day.WEDNESDAY.value)
-
-fav_day = Day.WEDNESDAY.name 
-
-if fav_day == "WEDNESDAY":
-    print("True, Hump days are the best.")
-
-else:
-    print("False, every other day sucks.")
+# * it is good practice to sound the code with try and except
 
 
-class Gym_plans(Enum):
-    BASIC = "18 hours a week"
-    DAILY = "3 hours a day"
-    UNLIMITED = "All hours every day"
-    PREMIUM = "'UNLIMITED' with a personal trainer"
+# * copyfile() = copies the content of a file
 
-class Member:
-    def __init__(self, name, id, plan):
-        self.name = name
-        self.id = id
-        self.plan = plan
-        
-#! --------------------------------------------------------------------------------
+import shutil
 
-m1 = Member("Janet Blunt", 1, Gym_plans.DAILY)
-print (
-        m1.name + "\n••••••••••••••••••••••••••••••••••••••••••••••••••••••••" +
-        "\n\t member ID →" + str(m1.id) + 
-        "\n\t Plan → " + m1.plan.name + 
-        " - detail: " + m1.plan.value    
-        )
+shutil.copyfile('test.txt', 'text_copy.txt') # source, destination/create file's name
 
-m2 = Member("Glenn Webb", 2, Gym_plans.PREMIUM)
-print (
-        m1.name + "\n••••••••••••••••••••••••••••••••••••••••••••••••••••••••" +
-        "\n\t member ID →" + str(m2.id) + 
-        "\n\t Plan → " + m2.plan.name + 
-        " - detail: " + m2.plan.value    
-        )
+
+#label is an area widget that holds text and/or image
+
+from tkinter import *
+
+window = Tk()
+window.title("Labels")
+window.iconbitmap('./Tkinter/python.ico')
+
+photo = PhotoImage(file='./Tkinter/spaceship.png')
+
+label = Label(
+    window, 
+    text="hello, Earth dwellers!", 
+    font=("Arial", 40,"bold"), 
+    fg="#562f7e",
+    bg="#e7eef5",
+    relief=SUNKEN, #border
+    bd=5, #border width
+    padx=20,
+    pady=20,
+    image=photo,
+    compound="top"
+    )
+#label.place(x=0,y=0) places whereever i choose
+label.pack()
+
+
+window.mainloop()

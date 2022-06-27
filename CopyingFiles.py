@@ -5,4 +5,4 @@
 
 import shutil
 
-shutil.copyfile('test2.txt', 'text2_copy.txt') # source, destination/create file's name
+shutil.copyfile('test.txt', 'text_copy.txt') # source, destination/create file's name
