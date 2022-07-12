@@ -99,5 +99,4 @@ label = Label(
 #label.place(x=0,y=0) places whereever i choose
 label.pack()
 
-
 window.mainloop()
