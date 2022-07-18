@@ -8,6 +8,8 @@ window.title("Python coding by Edu")
 window.geometry("460x460")
 window.iconbitmap('./Tkinter/python.ico')
 
+
+photo = PhotoImage("./Tkinter/burger")
 frame = Frame(
     window,
     bg="#9bfbe5",
@@ -52,6 +54,9 @@ button4 = Button(
     bg="#006c7f",
     fg="#dbe9f4"
 )
+
+Label(frame).pack(side=BOTTOM)
+
 
 frame.pack(side="bottom")
 button1.pack(side=TOP)

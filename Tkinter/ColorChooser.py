@@ -1,6 +1,5 @@
 from tkinter import *
 from tkinter import colorchooser
-from tkinter import font
 
 window = Tk()
 window.title("Python coding by Edu")
