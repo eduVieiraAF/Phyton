@@ -20,14 +20,14 @@ window.iconbitmap('./Tkinter/python.ico')
 
 text = Text(
     window,
-    font=("Ink Free", 16),
+    font=("Ink Free", 16, "bold"),
     bg="#e5e8e9",
     fg="#2c4345",
     height=15,
     width=80,
     padx=10,
     pady=10,
-    bd=2
+    bd=2, 
     )
 text.pack(padx=10, pady=10)
 
