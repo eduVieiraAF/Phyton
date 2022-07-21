@@ -1,7 +1,6 @@
 
 from tkinter import *
 
-
 def submit():
     string = entry.get()
     print(string)

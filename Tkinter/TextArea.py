@@ -1,11 +1,18 @@
+
+import string
 from tkinter import *
 from tkinter import messagebox
 
 def submit():
-    input = text.get("1.0", END)
-    print(input)
-    text.delete(1.0, END)
-    messagebox.showinfo(title="Sucessfully submitted.", message="Your text has been sent to terminal.")
+    input = str(text.get("1.0", END))
+    
+    if len(input) == 1.0:
+        messagebox.showwarning(title="Nothing to send.", message="Write something so we can send to terminal.")
+    
+    else:
+        print(input)
+        text.delete(1.0, END)
+        messagebox.showinfo(title="Sucessfully submitted.", message="Your text has been sent to terminal.")
 
 window = Tk()
 window.title("Python coding by Edu")
@@ -19,7 +26,8 @@ text = Text(
     height=15,
     width=80,
     padx=10,
-    pady=10
+    pady=10,
+    bd=2
     )
 text.pack(padx=10, pady=10)
 

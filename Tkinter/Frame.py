@@ -1,7 +1,4 @@
-
 from tkinter import *
-
-from numpy import pad
 
 window = Tk()
 window.title("Python coding by Edu")
@@ -9,7 +6,6 @@ window.geometry("460x460")
 window.iconbitmap('./Tkinter/python.ico')
 
 
-photo = PhotoImage("./Tkinter/burger")
 frame = Frame(
     window,
     bg="#9bfbe5",
@@ -55,7 +51,6 @@ button4 = Button(
     fg="#dbe9f4"
 )
 
-Label(frame).pack(side=BOTTOM)
 
 
 frame.pack(side="bottom")
@@ -63,5 +58,6 @@ button1.pack(side=TOP)
 button2.pack(side=LEFT)
 button3.pack(side=LEFT)
 button4.pack(side=LEFT)
+
 
 window.mainloop()
