@@ -1,10 +1,12 @@
 from tkinter import *
+from tkinter import messagebox
 
 def order():
     food = []
     for i in list_box.curselection():
         food.insert(i, list_box.get(i))
-        
+    
+    messagebox.showinfo(title="OREDER", message="Bon appetite")        
     print("Here's your order:")
     
     for i in food:
