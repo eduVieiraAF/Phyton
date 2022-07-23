@@ -1,10 +1,23 @@
 from tkinter import *
+from tkinter import messagebox
+
+def submit():
+    fn = FNEntry.get()
+    ln = LNEntry.get()
+    eMail = EmailEntry.get()
+    
+    FNEntry.delete(0, END)
+    LNEntry.delete(0,END)
+    EmailEntry.delete(0, END)
+    
+    FNEntry.focus()
+    
+    messagebox.showinfo(title="Registration", message= "{}\n{}\n{}".format(fn, ln, eMail))
 
 window = Tk()
 window.title("Python coding by Edu")
 window.iconbitmap('./Tkinter/python.ico')
 window.config(padx=20, pady=20)
-
 
 FNLabel = Label(
     window,
@@ -19,7 +32,9 @@ FNEntry = Entry(
     window,
     font=("Times New Roman", 14),
 
-).grid(row=0, column=1)
+)
+
+FNEntry.grid(row=0, column=1)
 
 LNLabel = Label(
     window,
@@ -34,7 +49,9 @@ LNEntry = Entry(
     window,
     font=("Times New Roman", 14),
 
-).grid(row=1, column=1)
+)
+
+LNEntry.grid(row=1, column=1)
 
 EmailLabel = Label(
     window,
@@ -49,7 +66,8 @@ EmailEntry = Entry(
     window,
     font=("Times New Roman", 14),
 
-).grid(row=2, column=1)
+)
+EmailEntry.grid(row=2, column=1)
 
 submitBtn = Button(
     window,
@@ -58,6 +76,11 @@ submitBtn = Button(
     width=22,
     bg="#3d3e40",
     fg="#d9dee3",
-).grid(row=3, column=0, columnspan=2)
+    command=submit
+)
+
+submitBtn.grid(row=3, column=0, columnspan=2)
+
+
 
 window.mainloop()
