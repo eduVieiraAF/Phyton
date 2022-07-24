@@ -1,12 +1,50 @@
 from tkinter import *
+from turtle import left
 from values import *
+
+expression = ""
+
+def press(num):
+    global expression
+    
+    expression = expression + str(num)
+    equation.set(expression)
+    
+def clear():
+    global expression
+    expression = ""
+    equation.set("")
+    
+def equal_press():
+    global expression
+    
+    try:
+        total = str(eval(expression))
+        equation.set(total)
+        expression=""
+    
+    except:
+        equation.set("ERROR")
+        expression = ""
+    
+def backspace():
+    global expression
+    expression = expression[:-1]
+    equation.set(expression)
+
+def invert():
+    global expression
+    expression = str(-float(expression))
+    equation.set(expression)
 
 calc_window = Tk()
 calc_window.title("Totalizer")
 calc_window.resizable(False, False)
-calc_window.config(padx=12, pady=12, relief="raised", bd=5, background=primary_light_variant)
+calc_window.config(padx=12, pady=12, relief="raised", bd=3, background=primary_light_variant)
 calc_window.iconbitmap("C:\\Users\\edu_v\\Python\\Tkinter\\Calculator\\Images\\calc.ico")
 
+equation = StringVar()
+    
 frm_outline = Frame(
     calc_window,
     relief="groove",
@@ -18,7 +56,8 @@ frm_outline = Frame(
 
 lbl_display = Label(
     calc_window,
-    text="0",
+    #text="0",
+    textvariable=equation,
     bg=primary_dark_variant,
     fg=secondary_light_variant,
     font=(lbl_font, 23,"bold"),
@@ -41,6 +80,7 @@ button_ce = Button(
     width=btn_width,
     padx=12,
     pady=12,
+    command=clear
 )
 
 button_backsapce = Button(
@@ -55,6 +95,7 @@ button_backsapce = Button(
     width=btn_width,
     padx=12,
     pady=12,
+    command=backspace
 )
 
 button_div = Button(
@@ -69,6 +110,7 @@ button_div = Button(
     width=btn_width,
     padx=12,
     pady=12,
+    command=lambda: press("/")
 )
 
 button_times = Button(
@@ -83,6 +125,7 @@ button_times = Button(
     width=btn_width,
     padx=12,
     pady=12,
+    command=lambda: press("*")
 )
 
 button7 = Button(
@@ -97,6 +140,7 @@ button7 = Button(
     width=btn_width,
     padx=12,
     pady=12,
+    command=lambda: press("7")
 )
 
 button8 = Button(
@@ -110,7 +154,8 @@ button8 = Button(
     height=btn_height,
     width=btn_width,
     padx=12,
-    pady=12
+    pady=12,
+    command=lambda: press("8")
 )
 
 button9 = Button(
@@ -124,7 +169,8 @@ button9 = Button(
     height=btn_height,
     width=btn_width,
     padx=12,
-    pady=12
+    pady=12,
+    command=lambda: press("9")
 )
 
 button_minus = Button(
@@ -138,7 +184,8 @@ button_minus = Button(
     height=btn_height,
     width=btn_width,
     padx=12,
-    pady=12
+    pady=12,
+    command=lambda: press("-")
 )
 
 button4 = Button(
@@ -152,7 +199,8 @@ button4 = Button(
     height=btn_height,
     width=btn_width,
     padx=12,
-    pady=12
+    pady=12,
+    command=lambda: press("4")
 )
 
 button5 = Button(
@@ -166,7 +214,8 @@ button5 = Button(
     height=btn_height,
     width=btn_width,
     padx=12,
-    pady=12
+    pady=12,
+    command=lambda: press("5")
 )
 
 button6 = Button(
@@ -180,7 +229,8 @@ button6 = Button(
     height=btn_height,
     width=btn_width,
     padx=12,
-    pady=12
+    pady=12,
+    command=lambda: press("6")
 )
 
 button_plus = Button(
@@ -194,7 +244,8 @@ button_plus = Button(
     height=btn_height,
     width=btn_width,
     padx=12,
-    pady=12
+    pady=12,
+    command=lambda: press("+")
 )
 
 button1= Button(
@@ -208,7 +259,8 @@ button1= Button(
     height=btn_height,
     width=btn_width,
     padx=12,
-    pady=12
+    pady=12,
+    command=lambda: press("1")
 )
 
 button2 = Button(
@@ -222,7 +274,8 @@ button2 = Button(
     height=btn_height,
     width=btn_width,
     padx=12,
-    pady=12
+    pady=12,
+    command=lambda: press("2")
 )
 
 button3 = Button(
@@ -236,7 +289,8 @@ button3 = Button(
     height=btn_height,
     width=btn_width,
     padx=12,
-    pady=12
+    pady=12,
+    command=lambda: press("3")
 )
 
 button_dot = Button(
@@ -251,6 +305,7 @@ button_dot = Button(
     width=btn_width,
     padx=12,
     pady=12,
+    command=lambda: press(".")
 )
 
 button_plus_minus = Button(
@@ -264,7 +319,8 @@ button_plus_minus = Button(
     height=btn_height,
     width=btn_width,
     padx=12,
-    pady=12
+    pady=12,
+    command=invert
 )
 
 button0 = Button(
@@ -278,7 +334,8 @@ button0 = Button(
     height=btn_height,
     width=btn_width,
     padx=12,
-    pady=12
+    pady=12,
+    command=lambda: press("0")
 )
 
 button_equals = Button(
@@ -292,7 +349,8 @@ button_equals = Button(
     width=8,
     padx=15,
     pady=12,
-    bd=2
+    bd=2,
+    command=equal_press
 )
 
 
