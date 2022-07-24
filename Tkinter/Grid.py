@@ -31,7 +31,7 @@ FNLabel = Label(
 FNEntry = Entry(
     window,
     font=("Times New Roman", 14),
-
+    width=40
 )
 
 FNEntry.grid(row=0, column=1)
@@ -41,13 +41,14 @@ LNLabel = Label(
     text="Last name: ",
     font=("Times New Roman", 16),
     padx=4,
-    pady=4,
+    pady=4
 ).grid(row=1, column=0)
 
 
 LNEntry = Entry(
     window,
     font=("Times New Roman", 14),
+    width=40
 
 )
 
@@ -65,6 +66,7 @@ EmailLabel = Label(
 EmailEntry = Entry(
     window,
     font=("Times New Roman", 14),
+    width=40
 
 )
 EmailEntry.grid(row=2, column=1)
@@ -80,7 +82,6 @@ submitBtn = Button(
 )
 
 submitBtn.grid(row=3, column=0, columnspan=2)
-
 
 
 window.mainloop()
