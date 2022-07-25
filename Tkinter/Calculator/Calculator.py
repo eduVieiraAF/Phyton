@@ -46,6 +46,7 @@ calc_window.config(padx=12, pady=12, relief="raised", bd=3, background=primary_l
 calc_window.iconbitmap("C:\\Users\\edu_v\\Python\\Tkinter\\Calculator\\Images\\calc.ico")
 
 equation = StringVar()
+equation.set("TOTALIZER")
     
 frm_outline = Frame(
     calc_window,

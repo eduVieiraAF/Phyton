@@ -1,11 +1,13 @@
+from email import message
 from tkinter import *
+from tkinter import messagebox
 
 def display():
     if (x.get() == 1):
-        print("You have agreed → Good luck!")
+        messagebox.showinfo(title = "Agreement", message="You have agreed → Good luck!")
     
     else:
-        print("How dare you!?")
+        messagebox.showwarning(title="WHaaaay?", message = "How dare you!?")
 
 window = Tk()
 window.title("Python code")
