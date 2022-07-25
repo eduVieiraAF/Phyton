@@ -1,5 +1,5 @@
 from tkinter import *
-from turtle import left
+from tkinter import messagebox
 from values import *
 
 expression = ""
@@ -21,7 +21,7 @@ def equal_press():
     try:
         total = str(eval(expression))
         equation.set(total)
-        expression=""
+        expression=total
     
     except:
         equation.set("ERROR")
@@ -34,8 +34,10 @@ def backspace():
 
 def invert():
     global expression
-    expression = str(-float(expression))
+    expression = "-" + expression
+    expression = str(eval(expression))
     equation.set(expression)
+       
 
 calc_window = Tk()
 calc_window.title("Totalizer")
@@ -56,7 +58,6 @@ frm_outline = Frame(
 
 lbl_display = Label(
     calc_window,
-    #text="0",
     textvariable=equation,
     bg=primary_dark_variant,
     fg=secondary_light_variant,
