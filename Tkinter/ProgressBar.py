@@ -25,7 +25,7 @@ task = StringVar()
 pb = Progressbar(
     window,
     orient=HORIZONTAL,
-    length=300
+    length=300,
     )
 
 pb.pack(pady=10)
