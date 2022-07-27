@@ -22,4 +22,4 @@ tt.fillcolor("yellow")
 tt.shapesize(5)
 tt.fd(100)
 
-tt.home()
+tt.mainloop()
