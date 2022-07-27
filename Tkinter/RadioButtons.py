@@ -36,10 +36,10 @@ for index in range(len(food)):
         font=("Impact", 30),
         image=food_images[index],
         compound="left",
-        indicatoron=0,
+        indicatoron=False,
         width=225,
         command=order
         )
-    radiobutton.pack(anchor=W)
+    radiobutton.pack()
 
 window.mainloop()
