@@ -6,7 +6,7 @@ def display():
         messagebox.showinfo(title = "Agreement", message="You have agreed → Good luck!")
     
     else:
-        messagebox.showwarning(title="WHaaaay?", message = "How dare you!?")
+        messagebox.showwarning(title="WHaaaat?", message = "How dare you!?")
 
 window = Tk()
 window.title("Python code")
