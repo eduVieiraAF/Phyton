@@ -23,6 +23,7 @@ def delete():
     list_box.config(height=list_box.size())
 
 window = Tk()
+window.config(padx=20, pady=20)
 window.title("Python coding by Edu")
 window.iconbitmap('./Tkinter/python.ico')
 

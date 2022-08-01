@@ -17,6 +17,8 @@ window = Tk()
 x = IntVar()
 
 window.title("Python code")
+window.resizable(False,False)
+window.config(padx=25, pady=25)
 window.iconbitmap('./Tkinter/python.ico')
 
 pizza_image = PhotoImage(file='./Tkinter/pizza.png')
