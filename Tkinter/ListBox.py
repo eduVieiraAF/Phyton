@@ -6,6 +6,7 @@ def order():
     for i in list_box.curselection():
         food.insert(i, list_box.get(i))
     
+        
     messagebox.showinfo(title="OREDER", message="Bon appetite")        
     print("Here's your order:")
     
@@ -29,24 +30,29 @@ window.iconbitmap('./Tkinter/python.ico')
 
 list_box = Listbox(
     window,
-    bg="#fff9d8",
-    fg="#940008",
+    bg="#54abed",
+    fg="#041c25",
     font=("Constantia", 22),
     width=12,
-    selectmode=MULTIPLE
+    bd=3,
+    selectmode=MULTIPLE,
+    selectbackground="#f7edb5",
+    selectforeground="#4c4808",
+    justify="center"
     )
+
 
 list_box.insert(1, "Pizza")
 list_box.insert(2, "Burger")
 list_box.insert(3, "Hotdog")
 list_box.config(height=list_box.size())
-list_box.pack()
+list_box.pack(padx=20, pady=5)
 
 entry_box = Entry(window, font=("Constantia", 16), fg="#244954")
-entry_box.pack()
+entry_box.pack(padx=20, pady=5)
 
 add_button = Button(window, text="Add", command=add, font=("Arial", 14))
-add_button.pack()
+add_button.pack(padx=20, pady=5)
 
 delete_button = Button(
     window, 
@@ -54,19 +60,19 @@ delete_button = Button(
     command=delete, 
     font=("Arial", 14), 
     fg="#781f19")
-delete_button.pack()
+delete_button.pack(padx=20, pady=5)
 
 order_button = Button(
     window, 
     text="ORDER",
     font=("Arial", 20), 
-    bg="#fbec5d", 
-    fg="#760006", 
-    activebackground="#fbec5d", 
-    activeforeground="White",
+    bg="#091551", 
+    fg="#deebfc", 
+    activebackground="#deebfc", 
+    activeforeground="#091551",
     command=order
     )
 
-order_button.pack()
+order_button.pack(padx=20, pady=5)
 
 window.mainloop()

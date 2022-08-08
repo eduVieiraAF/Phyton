@@ -1,3 +1,4 @@
+
 from tkinter import *
 
 food = ["Pizza", "Hamburger", "Hotdog"]
@@ -7,7 +8,7 @@ def order():
         print("Pizza! Good ordering.")
     
     elif x.get() == 1:
-        print("Hmmm... Burger!")
+        print("Hmmm... Burger. Awesome!")
         
     else:
         print("A hotdog might hit the spot.")
@@ -16,7 +17,7 @@ window = Tk()
 
 x = IntVar()
 
-window.title("Python code")
+window.title("Python coding")
 window.resizable(False,False)
 window.config(padx=25, pady=25)
 window.iconbitmap('./Tkinter/python.ico')
@@ -35,12 +36,14 @@ for index in range(len(food)):
         value = index,
         padx=25,
         pady=10,
-        font=("Impact", 30),
+        font=("MV Boli", 30),
         image=food_images[index],
         compound="left",
         indicatoron=False,
         width=225,
-        command=order
+        command=order,
+        bd=5,
+        
         )
     radiobutton.pack()
 
