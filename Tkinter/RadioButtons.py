@@ -38,13 +38,13 @@ for index in range(len(food)):
         pady=10,
         font=("MV Boli", 30),
         image=food_images[index],
-        compound="left",
+        compound="right",
         indicatoron=False,
         width=225,
         command=order,
-        bd=5,
-        
+        bd=3,    
         )
+    
     radiobutton.pack()
 
 window.mainloop()
