@@ -20,6 +20,6 @@ button = Button(
     command=choose_color
 )
 
-button.pack()
+button.pack(padx=4, pady=20)
 
 window.mainloop()

@@ -42,7 +42,7 @@ for index in range(len(food)):
         indicatoron=False,
         width=225,
         command=order,
-        bd=3,    
+        bd=3    
         )
     
     radiobutton.pack()

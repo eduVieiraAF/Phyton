@@ -1,5 +1,3 @@
-
-import string
 from tkinter import *
 from tkinter import messagebox
 
@@ -7,7 +5,7 @@ def submit():
     input = str(text.get("1.0", END))
     
     if len(input) == 1.0:
-        messagebox.showwarning(title="Nothing to send.", message="Write something so we can send to terminal.")
+        messagebox.showerror(title="Nothing to send.", message="There is nothing to send. Make sure you have written your text in the designated area.")
     
     else:
         print(input)
@@ -16,13 +14,14 @@ def submit():
 
 window = Tk()
 window.title("Python coding by Edu")
+window.resizable(False, False)
 window.iconbitmap('./Tkinter/python.ico')
 
 text = Text(
     window,
     font=("Ink Free", 16, "bold"),
-    bg="#e5e8e9",
-    fg="#2c4345",
+    bg="#d9e0e0",
+    fg="#2b5353",
     height=15,
     width=80,
     padx=10,

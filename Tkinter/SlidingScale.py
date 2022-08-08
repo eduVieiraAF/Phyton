@@ -1,10 +1,8 @@
-from statistics import geometric_mean
 from tkinter import *
-from turtle import left
 
 def submit():
     if scale.get() < 0:
-        print("Freezing...")
+        print("Freezing... Got a radiator?")
     
     if scale.get() > 35:
         print("Turn on the AC...")
