@@ -15,4 +15,15 @@ heading = Label(
     fg=label_title
 ).pack()
 
+scrollbar = Scrollbar(stimulator_window).pack(side=RIGHT, fill=Y)
+
+editor = Text(
+    stimulator_window,
+    width=400,
+    height=450,
+    # yscrollcommand=scrollbar.set,
+    padx=10, 
+    pady=10,
+    ).pack(fill=BOTH)
+
 stimulator_window.mainloop()
