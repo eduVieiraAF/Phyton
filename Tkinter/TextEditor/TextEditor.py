@@ -24,6 +24,18 @@ editor = Text(
     # yscrollcommand=scrollbar.set,
     padx=10, 
     pady=10,
-    ).pack(fill=BOTH)
+).pack(fill=BOTH)
+
+button = Button(
+    stimulator_window,
+    text='Save file',
+    font=('normal',14),
+    # command=save, 
+    bg=button_bg_color,
+    fg="white",
+    padx=5,
+    pady=5
+)
+button.place(x=270,y=520)
 
 stimulator_window.mainloop()
