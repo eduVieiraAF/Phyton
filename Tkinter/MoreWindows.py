@@ -21,7 +21,7 @@ window.geometry("400x350")
 window.config(padx=2, pady=30)
 window.iconbitmap('./Tkinter/python.ico')
 
-Button(window, text="Top level window", command=tl_window).pack()
-Button(window, text="Enterily ne window", command=new_window).pack()
+Button(window, text="Top level window", font=("Arial", 18), command=tl_window).pack()
+Button(window, text="Enterily ne window", font=("Arial", 18), command=new_window).pack()
 
 window.mainloop()
