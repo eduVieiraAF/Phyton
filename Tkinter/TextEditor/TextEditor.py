@@ -1,41 +1,56 @@
-from tkinter import *
-import tkinter as tk
-from tkinter.filedialog import asksaveasfilename
-from colors import *
 
-stimulator_window = Tk()
-stimulator_window.geometry("600x600")
-stimulator_window.resizable(False,False)
-stimulator_window.iconbitmap('./Tkinter/Phoenix.ico')
+from tkinter import *
+from tkinter.filedialog import asksaveasfilename
+
+window = Tk()
+window.resizable(False,False)
+window.title("Note taker")
+window.iconbitmap('./Tkinter/Phoenix.ico')
+window.config(padx=3, pady=20)
+
+def save():
+    file_path = asksaveasfilename(
+        defaultextension="txt",
+        filetypes=[
+            ("Text Files", "*.txt"), ("Python Files", "*.py"), ("All Files", "*.*")
+            ],
+        initialdir="C:\\Users\\edu_v\\Python\\"
+        )
+    
+    if not file_path:
+        return
+        with open(file_path, "w") as output_file:
+            text = editor.get(1.0, END)
+            output_file.write(text)
+            
+        window.title(f"Entitled - {file_path}")
+            
 
 heading = Label(
-    stimulator_window,
+    window,
     text="Notes",
     font=("MV Boli", 25, "bold"),
-    fg=label_title
+    fg="#719bb9"
 ).pack()
 
-scrollbar = Scrollbar(stimulator_window).pack(side=RIGHT, fill=Y)
-
 editor = Text(
-    stimulator_window,
-    width=400,
-    height=450,
-    # yscrollcommand=scrollbar.set,
+    window,
+    font=("MV Boli", 12),
+    fg="#153038",
     padx=10, 
     pady=10,
-).pack(fill=BOTH)
+).pack()
 
 button = Button(
-    stimulator_window,
+    window,
     text='Save file',
-    font=('normal',14),
-    # command=save, 
-    bg=button_bg_color,
+    font=('Consolas',13),
+    command=save, 
+    bg="#153038",
     fg="white",
     padx=5,
     pady=5
 )
-button.place(x=270,y=520)
+button.pack(pady=5)
 
-stimulator_window.mainloop()
+window.mainloop()
