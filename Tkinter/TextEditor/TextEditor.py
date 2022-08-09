@@ -25,7 +25,6 @@ def save():
             
         window.title(f"Entitled - {file_path}")
             
-
 heading = Label(
     window,
     text="Notes",
