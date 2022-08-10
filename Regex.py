@@ -34,3 +34,13 @@ if match:
 else:
     print("Failed")
 
+
+#* Example 3
+
+print("\n••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••\n")
+
+string = "Hello 12 hiya 89. Howdy 34"
+pattern = '\d'
+
+match = re.findall(pattern, string)
+print(match)
