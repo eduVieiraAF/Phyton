@@ -44,3 +44,12 @@ pattern = '\d'
 
 match = re.findall(pattern, string)
 print(match)
+
+
+#* Example 4 re.split()
+
+string = 'Twelve:12 Eighty nine:89'
+pattern = '\d'
+
+match = re.split(pattern, string)
+print(match)
