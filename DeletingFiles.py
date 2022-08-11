@@ -5,8 +5,8 @@ path = 'text2_copy.txt'
 
 try:
     os.remove(path) # ! Does not remove folder/directories
-    os.rmdir # * to remove directories which doesn't contain files
-    shutil.rmtree(path) # ! removes folder and all files within it
+    # os.rmdir # * to remove directories which doesn't contain files
+    # shutil.rmtree(path) # ! removes folder and all files within it
     
 except FileNotFoundError:
     print("File not found")
