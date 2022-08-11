@@ -1,4 +1,3 @@
-from cgitb import text
 
 text = "A simple way to write files\n using Python.\n"
 
