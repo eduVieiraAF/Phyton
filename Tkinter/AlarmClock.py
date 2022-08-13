@@ -6,7 +6,7 @@ from pygame import mixer
 
 root = Tk()
 root.title('Alarm Clock')
-root.iconbitmap('./Tkinter/Phoenix.ico')
+root.iconbitmap('Phoenix.ico')
 root.config(padx=6, pady=6)
 
 
