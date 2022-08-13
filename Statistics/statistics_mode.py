@@ -1,5 +1,4 @@
-
-#? The statistics.mode() method calculates the mode (central tendency) of the given numeric or nominal data set.
+# ? The statistics.mode() method calculates the mode (central tendency) of the given numeric or nominal data set.
 
 import statistics
 

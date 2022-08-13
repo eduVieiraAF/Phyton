@@ -1,32 +1,33 @@
 from tkinter import *
 from tkinter import messagebox
 
+
 def submit():
     fn = FNEntry.get()
     ln = LNEntry.get()
     eMail = EmailEntry.get()
-    
+
     FNEntry.delete(0, END)
-    LNEntry.delete(0,END)
+    LNEntry.delete(0, END)
     EmailEntry.delete(0, END)
-    
+
     FNEntry.focus()
-    
-    messagebox.showinfo(title="Registration", message= "{}\n{}\n{}".format(fn, ln, eMail))
+
+    messagebox.showinfo(title="Registration", message="{}\n{}\n{}".format(fn, ln, eMail))
+
 
 window = Tk()
 window.title("Python coding by Edu")
 window.iconbitmap('./Tkinter/python.ico')
 window.config(padx=20, pady=20)
 
-FNLabel = Label(
+Label(
     window,
     text="First name: ",
     font=("Times New Roman", 16),
     padx=4,
     pady=4,
 ).grid(row=0, column=0)
-
 
 FNEntry = Entry(
     window,
@@ -36,14 +37,13 @@ FNEntry = Entry(
 
 FNEntry.grid(row=0, column=1)
 
-LNLabel = Label(
+Label(
     window,
     text="Last name: ",
     font=("Times New Roman", 16),
     padx=4,
     pady=4
 ).grid(row=1, column=0)
-
 
 LNEntry = Entry(
     window,
@@ -54,14 +54,13 @@ LNEntry = Entry(
 
 LNEntry.grid(row=1, column=1)
 
-EmailLabel = Label(
+Label(
     window,
     text="Email: ",
     font=("Times New Roman", 16),
     padx=4,
     pady=4,
 ).grid(row=2, column=0)
-
 
 EmailEntry = Entry(
     window,
@@ -82,6 +81,5 @@ submitBtn = Button(
 )
 
 submitBtn.grid(row=3, column=0, columnspan=2)
-
 
 window.mainloop()

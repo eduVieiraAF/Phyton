@@ -3,7 +3,7 @@
 
 utensils = {"fork", "spoon", "knife", "mug"}
 dishes = {"bowl", "plate", "mug"}
-dinner_table = utensils.union(dishes) # joins both sets
+dinner_table = utensils.union(dishes)  # joins both sets
 
 print(utensils)
 print()
@@ -13,16 +13,16 @@ utensils.remove("knife")
 print(utensils)
 print()
 
-utensils.update(dishes) # adds all the items to a new set
+utensils.update(dishes)  # adds all the items to a new set
 print(utensils)
 print()
 
-##utensils.clear()
-##print(utensils)
-##print()
+# utensils.clear()
+# print(utensils)
+# print()
 
-print (dinner_table)
+print(dinner_table)
 print()
 
-print(utensils.difference(dishes)) # display what one has and other doesn't
-print(utensils.intersection(dishes)) # displays what they have in common
+print(utensils.difference(dishes))  # display what one has and other doesn't
+print(utensils.intersection(dishes))  # displays what they have in common

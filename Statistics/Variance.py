@@ -1,6 +1,6 @@
 import statistics
 
-#* The statistics.variance() method calculates the variance from a sample of data (from a population).
+# * The statistics.variance() method calculates the variance from a sample of data (from a population).
 
 # A large variance indicates that the data is spread out, - a small variance indicates that the data
 # is clustered closely around the mean.

@@ -1,43 +1,48 @@
 from tkinter import *
-from tkinter import messagebox
+
 from values import *
 
 expression = ""
 
+
 def press(num):
     global expression
-    
+
     expression = expression + str(num)
     equation.set(expression)
-    
+
+
 def clear():
     global expression
     expression = ""
     equation.set("")
-    
+
+
 def equal_press():
     global expression
-    
+
     try:
         total = str(eval(expression))
         equation.set(total)
-        expression=total
-    
-    except:
+        expression = total
+
+    except ValueError:
         equation.set("ERROR")
         expression = ""
-    
+
+
 def backspace():
     global expression
     expression = expression[:-1]
     equation.set(expression)
+
 
 def invert():
     global expression
     expression = "-" + expression
     expression = str(eval(expression))
     equation.set(expression)
-       
+
 
 calc_window = Tk()
 calc_window.title("Totalizer")
@@ -47,7 +52,7 @@ calc_window.iconbitmap("C:\\Users\\edu_v\\Python\\Tkinter\\Calculator\\Images\\c
 
 equation = StringVar()
 equation.set("TOTALIZER")
-    
+
 frm_outline = Frame(
     calc_window,
     relief="groove",
@@ -62,13 +67,13 @@ lbl_display = Label(
     textvariable=equation,
     bg=primary_dark_variant,
     fg=secondary_light_variant,
-    font=(lbl_font, 23,"bold"),
+    font=(lbl_font, 23, "bold"),
     relief="sunken",
     bd=7,
     width=15,
     padx=10,
     pady=10,
-    )
+)
 
 button_ce = Button(
     frm_outline,
@@ -85,7 +90,7 @@ button_ce = Button(
     command=clear
 )
 
-button_backsapce = Button(
+button_backspace = Button(
     frm_outline,
     bg=secondary_light_variant,
     activebackground=secondary_dark_variant,
@@ -250,7 +255,7 @@ button_plus = Button(
     command=lambda: press("+")
 )
 
-button1= Button(
+button1 = Button(
     frm_outline,
     bg=primary_dark_variant,
     activebackground=primary_light_variant,
@@ -355,19 +360,18 @@ button_equals = Button(
     command=equal_press
 )
 
-
 lbl_display.pack(side=TOP)
 frm_outline.pack(side=BOTTOM)
 
-button_ce.grid(row=0,column=0)
-button_backsapce.grid(row=0,column=1)
-button_div.grid(row=0,column=2)
-button_times.grid(row=0,column=3)
+button_ce.grid(row=0, column=0)
+button_backspace.grid(row=0, column=1)
+button_div.grid(row=0, column=2)
+button_times.grid(row=0, column=3)
 
-button7.grid(row=1,column=0)
-button8.grid(row=1,column=1)
-button9.grid(row=1,column=2)
-button_minus.grid(row=1,column=3)
+button7.grid(row=1, column=0)
+button8.grid(row=1, column=1)
+button9.grid(row=1, column=2)
+button_minus.grid(row=1, column=3)
 
 button4.grid(row=2, column=0)
 button5.grid(row=2, column=1)
@@ -382,6 +386,5 @@ button_dot.grid(row=3, column=3)
 button_plus_minus.grid(row=4, column=0)
 button0.grid(row=4, column=1)
 button_equals.grid(row=4, column=2, columnspan=2)
-
 
 calc_window.mainloop()

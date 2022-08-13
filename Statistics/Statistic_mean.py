@@ -1,7 +1,6 @@
+# ? Statistics mean
 
-#? Statistics mean
-
-#*The statistics.mean() method calculates the mean (average) of the given data set.
+# *The statistics.mean() method calculates the mean (average) of the given data set.
 
 # Mean = add up all the given values, then divide by how many values there are.
 

@@ -1,27 +1,30 @@
 from tkinter import *
 from tkinter import messagebox
 
+
 def order():
     food = []
     for i in list_box.curselection():
         food.insert(i, list_box.get(i))
-    
-        
-    messagebox.showinfo(title="OREDER", message="Bon appetite")        
+
+    messagebox.showinfo(title="OREDER", message="Bon appetite")
     print("Here's your order:")
-    
+
     for i in food:
         print(i)
-    
+
+
 def add():
     list_box.insert(list_box.size(), entry_box.get().capitalize())
     list_box.config(height=list_box.size())
     entry_box.delete(0, END)
 
+
 def delete():
     for i in reversed(list_box.curselection()):
         list_box.delete(i)
     list_box.config(height=list_box.size())
+
 
 window = Tk()
 window.config(padx=20, pady=20)
@@ -39,8 +42,7 @@ list_box = Listbox(
     selectbackground="#f7edb5",
     selectforeground="#4c4808",
     justify="center"
-    )
-
+)
 
 list_box.insert(1, "Pizza")
 list_box.insert(2, "Burger")
@@ -55,23 +57,23 @@ add_button = Button(window, text="Add", command=add, font=("Arial", 14))
 add_button.pack(padx=20, pady=5)
 
 delete_button = Button(
-    window, 
-    text="delete", 
-    command=delete, 
-    font=("Arial", 14), 
+    window,
+    text="delete",
+    command=delete,
+    font=("Arial", 14),
     fg="#781f19")
 delete_button.pack(padx=20, pady=5)
 
 order_button = Button(
-    window, 
+    window,
     text="ORDER",
-    font=("Arial", 20), 
-    bg="#091551", 
-    fg="#deebfc", 
-    activebackground="#deebfc", 
+    font=("Arial", 20),
+    bg="#091551",
+    fg="#deebfc",
+    activebackground="#deebfc",
     activeforeground="#091551",
     command=order
-    )
+)
 
 order_button.pack(padx=20, pady=5)
 

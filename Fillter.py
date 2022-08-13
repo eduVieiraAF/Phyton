@@ -1,13 +1,12 @@
-
-#? filter() creates a collection of elements from an iterable for which a function returns true
+# filter() creates a collection of elements from an iterable for which a function returns true
 # filter(function, iterable)
 
 friends = [("Rachel", 19),
-        ("Monica", 17),
-        ("Ross", 18),
-        ("Chandeller", 18),
-        ("Phoebe", 16),
-        ("Joey", 22)]
+           ("Monica", 17),
+           ("Ross", 18),
+           ("Chandler", 18),
+           ("Phoebe", 16),
+           ("Joey", 22)]
 
 age = lambda data: data[1] >= 18
 

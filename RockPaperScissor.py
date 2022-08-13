@@ -1,7 +1,7 @@
 import random
 
 while True:
-    
+
     choices = ["rock", "paper", "scissors"]
     computer = random.choice(choices)
     player = None
@@ -21,21 +21,21 @@ while True:
             print("you: ", player)
             print("You lose!")
             print("••••••••••••••")
-    
+
         if computer == "scissors":
             print("Computer: ", computer)
             print("you: ", player)
             print("You win!")
             print("••••••••••••••")
-         
+
     elif player == "scissors":
-    
+
         if computer == "rock":
             print("Computer: ", computer)
             print("you: ", player)
             print("You lose!")
             print("••••••••••••••")
-    
+
         if computer == "paper":
             print("Computer: ", computer)
             print("you: ", player)
@@ -48,7 +48,7 @@ while True:
             print("you: ", player)
             print("You win!")
             print("••••••••••••••")
-    
+
         if computer == "scissors":
             print("Computer: ", computer)
             print("you: ", player)
@@ -62,4 +62,3 @@ while True:
         break
 
 print("Bye!")
-

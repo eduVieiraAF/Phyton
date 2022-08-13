@@ -1,9 +1,9 @@
 import statistics
 
-#? Harmonic mean
+# ? Harmonic mean
 
-#* The statistics.harmonic_mean() method calculates the 
-#* harmonic mean (central location) of the given data set.
+# * The statistics.harmonic_mean() method calculates the
+# * harmonic mean (central location) of the given data set.
 
 # Harmonic mean = The reciprocal of the arithmetic mean() 
 # of the reciprocals of the data.
@@ -12,7 +12,7 @@ import statistics
 # If you have four values (a, b, c and d) →
 # it will be equivalent to 4 / (1/a + 1/b + 1/c + 1/d).
 
-#! Note: Cannot contain negative values!
+# ! Note: Cannot contain negative values!
 
 data = [10, 30, 50, 70, 90]
 

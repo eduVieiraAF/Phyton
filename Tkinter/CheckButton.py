@@ -1,21 +1,23 @@
 from tkinter import *
 from tkinter import messagebox
 
+
 def display():
-    if (x.get() == 1):
-        messagebox.showinfo(title = "Agreement", message="You have agreed → Good luck!")
-    
+    if x.get() == 1:
+        messagebox.showinfo(title="Agreement", message="You have agreed → Good luck!")
+
     else:
-        messagebox.showwarning(title="Whaaaaat?", message = "How dare you!?")
+        messagebox.showwarning(title="Whaaaaat?", message="How dare you!?")
+
 
 window = Tk()
 window.title("Python code")
-window.iconbitmap('./Tkinter/python.ico')
+window.iconbitmap('python.ico')
 window.config(background="#111111")
 
 x = IntVar()
 
-py = PhotoImage(file='./Tkinter/python.png')
+py = PhotoImage(file='python.png')
 
 check_button = Checkbutton(
     window,
@@ -37,4 +39,4 @@ check_button = Checkbutton(
 
 check_button.pack()
 
-window.mainloop() 
+window.mainloop()

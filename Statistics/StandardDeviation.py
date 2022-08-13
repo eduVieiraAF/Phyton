@@ -1,10 +1,9 @@
+# ? The statistics.stdev() method calculates the standard deviation from a sample of data.
 
-#? The statistics.stdev() method calculates the standard deviation from a sample of data.
-
-#* Standard deviation is a measure of how spread out the numbers are.
+# * Standard deviation is a measure of how spread out the numbers are.
 
 # A large standard deviation indicates that the data is spread out, - a small standard deviation indicates
-    # that the data is clustered closely around the mean.
+# that the data is clustered closely around the mean.
 
 # Tip: Standard deviation is (unlike the Variance) expressed in the same units as the data.
 

@@ -1,25 +1,31 @@
 from tkinter import *
 from tkinter import messagebox
-from turtle import right
+
 
 def open_file():
     messagebox.showinfo(title="Open", message="Your file will open.")
 
+
 def save_file():
     messagebox.showinfo(title="Save", message="Your file will be saved.")
-    
+
+
 def exit_program():
     messagebox.showwarning(title="Exit", message="Guess this is goodbye then...")
     exit()
-    
+
+
 def edit_cut():
     messagebox.showinfo(title="Cut", message="Selection cut.")
-    
+
+
 def edit_copy():
     messagebox.showinfo(title="Copy", message="Selection copied.")
 
+
 def edit_paste():
     messagebox.showinfo(title="Paste", message="Selection pasted.")
+
 
 window = Tk()
 window.title("Python coding by Edu")
@@ -32,9 +38,9 @@ menu_bar = Menu(window)
 window.config(menu=menu_bar)
 
 file_menu = Menu(
-    menu_bar, 
+    menu_bar,
     tearoff=0
-    )
+)
 menu_bar.add_cascade(label="File", menu=file_menu)
 
 file_menu.add_command(label="Open", command=open_file, image=fire_image, compound="left")
@@ -43,10 +49,10 @@ file_menu.add_separator()
 file_menu.add_command(label="Exit", command=exit_program)
 
 edit_menu = Menu(
-    menu_bar, 
+    menu_bar,
     tearoff=0,
     font=("Ink free", 12)
-    )
+)
 menu_bar.add_cascade(label="Edit", menu=edit_menu)
 
 edit_menu.add_command(label="Cut", command=edit_cut)

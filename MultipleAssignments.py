@@ -5,7 +5,7 @@
 # age = 40
 # handsome = True
 
-#Mulpuple assignment
+# Multiple assignment
 
 name, age, handsome = "Eduardo", 21, True
 

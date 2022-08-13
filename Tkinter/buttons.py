@@ -1,17 +1,18 @@
-
 from tkinter import *
 
 count = 0
+
 
 def click():
     global count
     if count == 10:
         print("Jesus! How many more times ya gon' click!?")
-    
+
     if count == 20:
         print("Are you kidding me??")
     count += 1
     print("You've clicked {} times.".format(count))
+
 
 window = Tk()
 window.geometry("460x460")
@@ -21,7 +22,7 @@ window.iconbitmap('./Tkinter/Phoenix.ico')
 photo = PhotoImage(file='./Tkinter/spaceship.png')
 
 button = Button(
-    window, 
+    window,
     text="Click me!",
     command=click,
     font=("Comic Sans", 40),
@@ -31,7 +32,7 @@ button = Button(
     activebackground="Black",
     image=photo,
     compound="bottom"
-    )
+)
 
 button.pack()
 

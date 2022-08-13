@@ -2,7 +2,7 @@ import re
 
 print("\n••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••\n")
 
-#* Example 1
+# * Example 1
 
 str = "Python programming → So we can develop AI and machine learning"
 match = re.search(r'machine', str)
@@ -21,7 +21,7 @@ match = re.search(r'\.', str)
 
 print(match)
 
-#* Example 2
+# * Example 2
 print("\n••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••\n")
 
 pattern = '^a....s$'
@@ -34,8 +34,7 @@ if match:
 else:
     print("Failed")
 
-
-#* Example 3
+# * Example 3
 
 print("\n••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••\n")
 
@@ -45,11 +44,11 @@ pattern = '\d'
 match = re.findall(pattern, string)
 print(match)
 
-
-#* Example 4 re.split()
+# * Example 4 re.split()
 
 string = 'Twelve:12 Eighty nine:89'
 pattern = '\d'
+
 
 match = re.split(pattern, string)
 print(match)

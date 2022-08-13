@@ -8,7 +8,7 @@ z = int(z)
 
 print(x)
 print(y)
-print(z*5)
+print(z * 5)
 
 print(" ")
 

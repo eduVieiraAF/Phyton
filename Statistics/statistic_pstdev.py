@@ -1,7 +1,6 @@
+# ? The statistics.pstdev() method calculates the standard deviation from an entire population.
 
-#? The statistics.pstdev() method calculates the standard deviation from an entire population.
-
-#* Standard deviation is a measure of how spread out the numbers are.
+# * Standard deviation is a measure of how spread out the numbers are.
 
 # A large standard deviation indicates that the data is spread out, - 
 # a small standard deviation indicates that the data is clustered closely around the mean.

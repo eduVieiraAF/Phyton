@@ -1,6 +1,5 @@
-
-#? Make sure you have numpy 
-    # C:\Users\Your Name>pip install numpy
+# ? Make sure you have numpy
+# C:\Users\Your Name>pip install numpy
 
 import numpy
 

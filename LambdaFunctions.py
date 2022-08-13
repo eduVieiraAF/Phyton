@@ -1,8 +1,7 @@
+# ? LAMBDA FUNCTIONS are written in one line using the lambda keyword
+# ?  → they accept any number of arguments, but only have one expression
 
-#? LAMBDA FUNCTIONS are written in one line using the lambda keyword
-#?  → they accept any number or arguments, but only have one expression
-
-#* FORMULA → lambda parameter: expression
+# * FORMULA → lambda parameter: expression
 
 double = lambda x: x * 2
 # nearly the same as:
@@ -13,7 +12,7 @@ print(double(5))
 print()
 
 multiply = lambda x, y: x * y
-print(multiply(10,11))
+print(multiply(10, 11))
 print()
 
 full_name = lambda first_name, last_name: first_name.capitalize() + " " + last_name.capitalize()
