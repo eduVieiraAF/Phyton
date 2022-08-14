@@ -18,7 +18,7 @@ def open_file():
 window = Tk()
 window.title("Python coding by Edu")
 window.geometry("300x150")
-window.iconbitmap('./Tkinter/python.ico')
+# window.iconbitmap('Phoenix.ico')
 
 button = Button(
     text="Open\nfile",
