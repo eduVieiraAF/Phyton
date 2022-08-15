@@ -19,7 +19,7 @@ def submit():
 window = Tk()
 window.title("Python coding by Edu")
 window.resizable(False, False)
-window.iconbitmap('./Tkinter/python.ico')
+# window.iconbitmap('./Tkinter/python.ico')
 
 text = Text(
     window,

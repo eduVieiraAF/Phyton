@@ -18,7 +18,7 @@ def submit():
 
 window = Tk()
 window.title("Python coding by Edu")
-window.iconbitmap('./Tkinter/python.ico')
+# window.iconbitmap('./Tkinter/python.ico')
 window.config(padx=20, pady=20)
 
 Label(

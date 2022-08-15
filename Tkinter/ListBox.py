@@ -7,7 +7,7 @@ def order():
     for i in list_box.curselection():
         food.insert(i, list_box.get(i))
 
-    messagebox.showinfo(title="OREDER", message="Bon appetite")
+    messagebox.showinfo(title="ORDER", message="Bon appetite")
     print("Here's your order:")
 
     for i in food:
@@ -29,7 +29,7 @@ def delete():
 window = Tk()
 window.config(padx=20, pady=20)
 window.title("Python coding by Edu")
-window.iconbitmap('./Tkinter/python.ico')
+# window.iconbitmap('./Tkinter/python.ico')
 
 list_box = Listbox(
     window,
