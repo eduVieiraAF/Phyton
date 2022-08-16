@@ -14,7 +14,7 @@ def save_file():
     else:
         file = filedialog.asksaveasfile(initialdir="/home/eduvieira/IdeaProjects/Python",
                                         title="Give it a pretty name",
-                                        defaultextension='.txt',
+                                        #defaultextension='.txt',
                                         filetypes=[
                                             ("Text file", ".txt"),
                                             ("HTML file", ".html"),
