@@ -1,9 +1,15 @@
 from tkinter import *
-from tkinter import filedialog
+from tkinter import filedialog, messagebox
+
+
+def quit(event):
+    if messagebox.askyesno(title="Exit", message="Are you sure you want to exit?"):
+        window.destroy()
 
 
 def save_file():
-    file = filedialog.asksaveasfile(initialdir="C:\\Users\\edu_v\\Python\\",
+    file = filedialog.asksaveasfile(initialdir="/home/eduvieira/IdeaProjects/Python",
+                                    title="Give it a pretty name",
                                     defaultextension='.txt',
                                     filetypes=[
                                         ("Text file", ".txt"),
@@ -21,13 +27,18 @@ def save_file():
 
 
 window = Tk()
-window.title("Python coding by Edu")
+window.title("Python")
 # window.iconbitmap('./Tkinter/python.ico')
+window.bind("<Escape>", quit)
 
-text = Text(window,
-            padx=10,
-            pady=10,
-            font=("Helvetia", 12))
+text = Text(
+    window,
+    padx=10,
+    pady=10,
+    font=("Helvetia", 12),
+    relief="sunken",
+    bd=3
+)
 
 text.pack(padx=8, pady=8)
 
