@@ -8,17 +8,21 @@ def quit(event):
 
 
 def save_file():
-    file = filedialog.asksaveasfile(initialdir="/home/eduvieira/IdeaProjects/Python",
-                                    title="Give it a pretty name",
-                                    defaultextension='.txt',
-                                    filetypes=[
-                                        ("Text file", ".txt"),
-                                        ("HTML file", ".html"),
-                                        ("Word file", ".doc"),
-                                        ("Python file", ".py")
-                                    ])
-    if file is None:
-        return
+    if text.compare("end-1c", "==", "1.0"):
+        messagebox.showerror(title="EMPTY FILE", message="You cannot save an empty file.")
+    
+    else:
+        file = filedialog.asksaveasfile(initialdir="/home/eduvieira/IdeaProjects/Python",
+                                        title="Give it a pretty name",
+                                        defaultextension='.txt',
+                                        filetypes=[
+                                            ("Text file", ".txt"),
+                                            ("HTML file", ".html"),
+                                            ("Word file", ".doc"),
+                                            ("Python file", ".py")
+                                        ])
+        if file is None:
+            return
 
     file_text = str(text.get(1.0, END))
     file.write(file_text)
