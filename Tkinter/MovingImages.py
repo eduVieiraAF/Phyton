@@ -1,4 +1,10 @@
 from tkinter import *
+from tkinter import messagebox
+
+
+def ciao(event):
+    if messagebox.askyesno(title="Exit?", message="Are you sure you want to quit?"):
+        window.destroy()
 
 
 def move_up(event):
@@ -26,6 +32,7 @@ window.bind("<Up>", move_up)
 window.bind("<Down>", move_down)
 window.bind("<Left>", move_left)
 window.bind("<Right>", move_right)
+window.bind("<Escape>", ciao)
 
 spaceship = PhotoImage(file="spaceship.png")
 
