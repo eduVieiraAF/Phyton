@@ -16,6 +16,7 @@ def save_file():
 
     file_text = str(text.get(1.0, END))
     file.write(file_text)
+    text.delete(0.1, END)
     file.close()
 
 
@@ -28,7 +29,7 @@ text = Text(window,
             pady=10,
             font=("Helvetia", 12))
 
-text.pack()
+text.pack(padx=8, pady=8)
 
 button = Button(
     text="Save",
@@ -36,6 +37,6 @@ button = Button(
     command=save_file
 )
 
-button.pack()
+button.pack(padx=8, pady=8)
 
 window.mainloop()
