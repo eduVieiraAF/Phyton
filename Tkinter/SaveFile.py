@@ -2,15 +2,15 @@ from tkinter import *
 from tkinter import filedialog, messagebox
 
 
-def quit(event):
+def esc_quit(event):
     if messagebox.askyesno(title="Exit", message="Are you sure you want to exit?"):
         window.destroy()
 
 
 def save_file():
-    if text.compare("end-1c", "==", "1.0"):
+    if len(text.get("1.0", "end-1c")) == 0:
         messagebox.showerror(title="EMPTY FILE", message="You cannot save an empty file.")
-    
+
     else:
         file = filedialog.asksaveasfile(initialdir="/home/eduvieira/IdeaProjects/Python",
                                         title="Give it a pretty name",
@@ -24,16 +24,16 @@ def save_file():
         if file is None:
             return
 
-    file_text = str(text.get(1.0, END))
-    file.write(file_text)
-    text.delete(0.1, END)
-    file.close()
+        file_text = str(text.get(1.0, END))
+        file.write(file_text)
+        text.delete(0.1, END)
+        file.close()
 
 
 window = Tk()
 window.title("Python")
 # window.iconbitmap('./Tkinter/python.ico')
-window.bind("<Escape>", quit)
+window.bind("<Escape>", esc_quit)
 
 text = Text(
     window,
