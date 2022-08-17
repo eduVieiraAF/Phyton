@@ -21,11 +21,10 @@ x = IntVar()
 window.title("Python coding")
 window.resizable(False, False)
 window.config(padx=25, pady=25)
-window.iconbitmap('./Tkinter/python.ico')
 
-pizza_image = PhotoImage(file='./Tkinter/pizza.png')
-burger_image = PhotoImage(file='./Tkinter/burger.png')
-hotdog_image = PhotoImage(file='./Tkinter/hotdog.png')
+pizza_image = PhotoImage(file='pizza.png')
+burger_image = PhotoImage(file='burger.png')
+hotdog_image = PhotoImage(file='hotdog.png')
 
 food_images = [pizza_image, burger_image, hotdog_image]
 
@@ -37,13 +36,13 @@ for index in range(len(food)):
         value=index,
         padx=25,
         pady=10,
-        font=("MV Boli", 30),
+        font=("MV Boli", 24),
         image=food_images[index],
         compound="right",
         indicatoron=False,
         width=225,
         command=order,
-        bd=3
+        bd=3,
     )
 
     radiobutton.pack()

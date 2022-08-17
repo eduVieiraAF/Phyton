@@ -14,9 +14,8 @@ def submit():
 window = Tk()
 window.geometry("500x500")
 window.title("Python coding by Edu")
-window.iconbitmap('./Tkinter/python.ico')
 
-hot_image = PhotoImage(file='./Tkinter/fire.png')
+hot_image = PhotoImage(file='fire.png')
 hot_label = Label(image=hot_image)
 hot_label.pack()
 
@@ -43,7 +42,7 @@ button = Button(
     command=submit
 )
 
-cold_image = PhotoImage(file='./Tkinter/snow.png')
+cold_image = PhotoImage(file='snow.png')
 cold_label = Label(image=cold_image)
 cold_label.pack()
 

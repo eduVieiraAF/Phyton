@@ -3,7 +3,6 @@ from tkinter import Tk, messagebox, Button
 window = Tk()
 window.title("Python coding by Edu")
 window.geometry("350x150")
-# window.iconbitmap('./Tkinter/python.ico')
 
 
 def click():

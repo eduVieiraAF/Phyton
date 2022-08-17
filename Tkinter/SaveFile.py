@@ -33,12 +33,14 @@ window = Tk()
 window.title("Python")
 window.bind("<Escape>", esc_quit)
 
+save_icon = PhotoImage(file="save.png")
+
 text = Text(
     window,
     padx=10,
     pady=10,
     font=("Helvetia", 12),
-    relief="sunken",
+    relief=RIDGE,
     bd=3
 )
 
@@ -47,6 +49,8 @@ text.pack(padx=8, pady=8)
 button = Button(
     text="Save",
     font=("Segoe UI Semibold", 12),
+    image=save_icon,
+    compound=RIGHT,
     command=save_file
 )
 
