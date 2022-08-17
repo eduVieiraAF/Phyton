@@ -7,7 +7,7 @@ def open_file():
     file_path = filedialog.askopenfilename(
         initialdir="C:\\Users\\edu_v\\Python\\",
         title="Select a file, sir.",
-        filetypes=(("Text files", "*.txt"), ("Python files", "*.py"))
+        filetypes=(("Text files", "*.txt"), ("Python files", "*.py"), ("HTML files", "*.html"))
     )
     # messagebox.showinfo(title="File path", message=file_path)
     file = open(file_path, 'r')
