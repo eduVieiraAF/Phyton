@@ -9,7 +9,6 @@ def open_file():
         title="Select a file, sir.",
         filetypes=(("Text files", "*.txt"), ("Python files", "*.py"), ("HTML files", "*.html"))
     )
-    # messagebox.showinfo(title="File path", message=file_path)
     file = open(file_path, 'r')
     messagebox.showinfo(title="File content", message=file.read())
     file.close()
@@ -18,7 +17,6 @@ def open_file():
 window = Tk()
 window.title("Python coding by Edu")
 window.geometry("300x150")
-# window.iconbitmap('Phoenix.ico')
 
 button = Button(
     text="Open\nfile",
