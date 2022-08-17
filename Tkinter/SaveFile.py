@@ -14,7 +14,6 @@ def save_file():
     else:
         file = filedialog.asksaveasfile(initialdir="/home/eduvieira/IdeaProjects/Python",
                                         title="Give it a pretty name",
-                                        #defaultextension='.txt',
                                         filetypes=[
                                             ("Text file", ".txt"),
                                             ("HTML file", ".html"),
@@ -32,7 +31,6 @@ def save_file():
 
 window = Tk()
 window.title("Python")
-# window.iconbitmap('./Tkinter/python.ico')
 window.bind("<Escape>", esc_quit)
 
 text = Text(
