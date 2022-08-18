@@ -8,7 +8,7 @@ root.config(padx=15, pady=15, bg="black")
 
 
 def time():
-    string = strftime('%a | %B %d, %Y\n%H:%M:%S %p')
+    string = strftime('%A\n%B %d, %Y\n%H:%M:%S %p')
     label.config(text=string)
     label.after(1000, time)
 
@@ -19,7 +19,7 @@ label = Label(
     background="black",
     foreground="#ff5c40"
 )
-label.pack(anchor='center')
+label.pack()
 
 time()
 
