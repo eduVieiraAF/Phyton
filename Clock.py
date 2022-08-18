@@ -15,7 +15,7 @@ def time():
 
 label = Label(
     root,
-    font=("tahoma", 60),
+    font=("tahoma", 30),
     background="black",
     foreground="#ff5c40"
 )
