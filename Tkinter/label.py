@@ -1,12 +1,16 @@
 # label is an area widget that holds text and/or image
 
+from email.mime import image
 from tkinter import *
+from PIL import Image, ImageTk
 
 window = Tk()
 window.title("Labels")
-window.iconbitmap('./Tkinter/Phoenix.ico')
 
-photo = PhotoImage(file='./Tkinter/spaceship.png')
+photo = Image.open('/home/eduvieira/IdeaProjects/Python/Tkinter/spaceship.png')
+photo_sized = photo.resize((160, 160))
+my_photo=ImageTk.PhotoImage(photo_sized)
+
 
 label = Label(
     window,
@@ -18,8 +22,9 @@ label = Label(
     bd=5,  # border width
     padx=20,
     pady=20,
-    image=photo,
-    compound="top"
+    image=my_photo,
+    compound="top",
+    
 )
 # label.place(x=0,y=0) places wherever i choose
 label.pack()
