@@ -48,7 +48,7 @@ calc_window = Tk()
 calc_window.title("Totalizer")
 calc_window.resizable(False, False)
 calc_window.config(padx=12, pady=12, relief="raised", bd=3, background=primary_light_variant)
-calc_window.iconbitmap("C:\\Users\\edu_v\\Python\\Tkinter\\Calculator\\Images\\calc.ico")
+# calc_window.iconbitmap("C:\\Users\\edu_v\\Python\\Tkinter\\Calculator\\Images\\calc.ico")
 
 equation = StringVar()
 equation.set("TOTALIZER")
