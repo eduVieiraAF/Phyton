@@ -33,6 +33,8 @@ window = Tk()
 window.title("Python")
 window.bind("<Escape>", esc_quit)
 
+file_var = StringVar()
+
 save_icon = PhotoImage(file="save.png")
 
 text = Text(
@@ -46,14 +48,14 @@ text = Text(
 
 text.pack(padx=8, pady=8)
 
-button = Button(
-    text="Save",
+save_button = Button(
+    text="Save file",
     font=("Segoe UI Semibold", 12),
     image=save_icon,
     compound=RIGHT,
     command=save_file
 )
 
-button.pack(padx=8, pady=8)
+save_button.pack(padx=8, pady=8, side=LEFT)
 
 window.mainloop()
