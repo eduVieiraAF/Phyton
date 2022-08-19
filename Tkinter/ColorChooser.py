@@ -5,7 +5,6 @@ from tkinter import messagebox
 window = Tk()
 window.title("Python coding by Edu")
 window.geometry("450x450+300+200")
-window.iconbitmap('./Tkinter/python.ico')
 
 
 def choose_color():
@@ -17,8 +16,8 @@ def choose_color():
 
 
 button = Button(
-    text="Choose\n color",
-    font=("Arial", 20, "bold"),
+    text="Pick a\n colour",
+    font=("Free Ink", 20, "bold"),
     command=choose_color
 )
 
