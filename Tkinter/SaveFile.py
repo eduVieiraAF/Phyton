@@ -17,6 +17,8 @@ def open_file():
                 ("HTML files", "*.html"),
             )
         )
+
+        text.delete(0.1, END)
         file = open(file_path, 'r')
         text.insert(END, file.read())
 
@@ -72,7 +74,7 @@ text = Text(
     window,
     padx=10,
     pady=10,
-    font=("Helvetica", 12),
+    font=12,
     relief=RIDGE,
     bd=3
 )
