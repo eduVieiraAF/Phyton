@@ -4,23 +4,29 @@ from tkinter import filedialog, messagebox
 
 
 def open_file():
-    file_path = filedialog.askopenfilename(
-        initialdir="/home/eduvieira/IdeaProjects/Python",
-        title="Pick a file",
-        filetypes=(
-            ("Text files", "*.txt"),
-            ("Word files", "*.doc"),
-            ("Python files", "*.py"),
-            ("HTML files", "*.html"),
+    # noinspection PyBroadException
+    try:
+        file_path = filedialog.askopenfilename(
+            initialdir="/home/eduvieira/IdeaProjects/Python",
+            title="Pick a file",
+            filetypes=(
+                ("Text files", "*.txt"),
+                ("Word files", "*.doc"),
+                ("Python files", "*.py"),
+                ("HTML files", "*.html"),
+            )
         )
-    )
-    file = open(file_path, 'r')
-    text.insert(END, file.read())
+        file = open(file_path, 'r')
+        text.insert(END, file.read())
+
+    except Exception:
+        print("no file was open ")
 
 
 def pick_colour():
     color = colorchooser.askcolor()
     color_value = color[1]
+    # noinspection PyTypeChecker
     text.config(fg=color_value)
 
 
@@ -52,7 +58,7 @@ def save_file():
 
 
 window = Tk()
-window.title("Python")
+window.title("Python Notes Program")
 window.bind("<Escape>", esc_quit)
 
 save_icon = PhotoImage(file="save.png")
