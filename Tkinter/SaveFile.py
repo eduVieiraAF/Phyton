@@ -6,6 +6,7 @@ from tkinter import filedialog, messagebox
 def open_file():
     # noinspection PyBroadException
     try:
+        # noinspection SpellCheckingInspection
         file_path = filedialog.askopenfilename(
             initialdir="/home/eduvieira/IdeaProjects/Python",
             title="Pick a file",
@@ -30,6 +31,7 @@ def pick_colour():
     text.config(fg=color_value)
 
 
+# noinspection PyUnusedLocal
 def esc_quit(event):
     if messagebox.askyesno(title="Exit", message="Are you sure you want to exit?"):
         window.destroy()
@@ -40,6 +42,7 @@ def save_file():
         messagebox.showerror(title="EMPTY FILE", message="You cannot save an empty file.")
 
     else:
+        # noinspection SpellCheckingInspection
         file = filedialog.asksaveasfile(initialdir="/home/eduvieira/IdeaProjects/Python",
                                         title="Save this file",
                                         filetypes=[
@@ -69,7 +72,7 @@ text = Text(
     window,
     padx=10,
     pady=10,
-    font=("Helvetia", 12),
+    font=("Helvetica", 12),
     relief=RIDGE,
     bd=3
 )
