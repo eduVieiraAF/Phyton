@@ -13,6 +13,7 @@ def choose_color():
     button.config(fg=color_hex)
     window.config(bg=color_hex)
     messagebox.showinfo(title="Hexadecimal value", message="Here's the color you've picked out → " + color_hex)
+    return color_hex
 
 
 button = Button(

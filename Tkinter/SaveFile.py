@@ -1,5 +1,27 @@
 from tkinter import *
+from tkinter import colorchooser
 from tkinter import filedialog, messagebox
+
+
+def open_file():
+    file_path = filedialog.askopenfilename(
+        initialdir="/home/eduvieira/IdeaProjects/Python",
+        title="Pick a file",
+        filetypes=(
+            ("Text files", "*.txt"),
+            ("Word files", "*.doc"),
+            ("Python files", "*.py"),
+            ("HTML files", "*.html"),
+        )
+    )
+    file = open(file_path, 'r')
+    text.insert(END, file.read())
+
+
+def pick_colour():
+    color = colorchooser.askcolor()
+    color_value = color[1]
+    text.config(fg=color_value)
 
 
 def esc_quit(event):
@@ -13,7 +35,7 @@ def save_file():
 
     else:
         file = filedialog.asksaveasfile(initialdir="/home/eduvieira/IdeaProjects/Python",
-                                        title="Give it a pretty name",
+                                        title="Save this file",
                                         filetypes=[
                                             ("Text file", ".txt"),
                                             ("HTML file", ".html"),
@@ -33,9 +55,9 @@ window = Tk()
 window.title("Python")
 window.bind("<Escape>", esc_quit)
 
-file_var = StringVar()
-
 save_icon = PhotoImage(file="save.png")
+paint_icon = PhotoImage(file="paint.png")
+open_icon = PhotoImage(file="open.png")
 
 text = Text(
     window,
@@ -46,16 +68,32 @@ text = Text(
     bd=3
 )
 
-text.pack(padx=8, pady=8)
-
 save_button = Button(
     text="Save file",
-    font=("Segoe UI Semibold", 12),
     image=save_icon,
     compound=RIGHT,
     command=save_file
 )
 
+color_button = Button(
+    window,
+    text="Pick a colour",
+    command=pick_colour,
+    image=paint_icon,
+    compound=RIGHT
+)
+
+open_button = Button(
+    window,
+    text="Open file",
+    image=open_icon,
+    compound=RIGHT,
+    command=open_file
+)
+
+text.pack(padx=8, pady=8)
 save_button.pack(padx=8, pady=8, side=LEFT)
+color_button.pack(padx=8, pady=8, side=LEFT)
+open_button.pack(padx=8, pady=8, side=LEFT)
 
 window.mainloop()
