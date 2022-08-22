@@ -1,7 +1,7 @@
 # a set is a collection that is unsorted, unindexed and does not allow duplicate values
 
 
-utensils = {"fork", "spoon", "knife", "mug"}
+utensils = {"fork", "spoon", "knife", "mug", "sourcer"}
 dishes = {"bowl", "plate", "mug"}
 dinner_table = utensils.union(dishes)  # joins both sets
 
