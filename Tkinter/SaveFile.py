@@ -21,6 +21,7 @@ def open_file():
         text.delete(0.1, END)
         file = open(file_path, 'r')
         text.insert(END, file.read())
+        file.close()
 
     except Exception:
         print("no file was open ")
