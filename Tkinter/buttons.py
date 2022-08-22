@@ -7,6 +7,7 @@ def click():
     global count
     if count == 10:
         print("Jesus! How many more times ya gon' click!?")
+        
 
     if count == 20:
         print("Are you kidding me??")
@@ -17,7 +18,6 @@ def click():
 window = Tk()
 window.geometry("460x460")
 window.title("Phoenix code")
-window.iconbitmap('./Tkinter/Phoenix.ico')
 
 photo = PhotoImage(file='./Tkinter/spaceship.png')
 
