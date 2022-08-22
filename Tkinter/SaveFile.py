@@ -66,9 +66,9 @@ window = Tk()
 window.title("Python Notes Program")
 window.bind("<Escape>", esc_quit)
 
-save_icon = PhotoImage(file="save.png")
-paint_icon = PhotoImage(file="paint.png")
-open_icon = PhotoImage(file="open.png")
+save_icon = PhotoImage(file="./Tkinter/save.png")
+paint_icon = PhotoImage(file="./Tkinter/paint.png")
+open_icon = PhotoImage(file="./Tkinter/open.png")
 
 text = Text(
     window,
