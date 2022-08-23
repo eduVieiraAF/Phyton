@@ -1,9 +1,10 @@
 from tkinter import *
 
+
 def do_something(event):
-    print("Screen Coordinates → "+ str(event.x) + " | " + str(event.y))
-    
-    
+    print("Screen Coordinates → " + str(event.x) + " | " + str(event.y))
+
+
 window = Tk()
 window.title("Python coding by Edu")
 window.geometry("460x460")
