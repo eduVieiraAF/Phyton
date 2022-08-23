@@ -2,7 +2,6 @@ from tkinter import *
 
 window = Tk()
 window.title("Python coding by Edu")
-window.iconbitmap('./Tkinter/python.ico')
 
 canvas = Canvas(
     window,

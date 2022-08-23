@@ -12,7 +12,6 @@ def display():
 
 window = Tk()
 window.title("Python code")
-window.iconbitmap('python.ico')
 window.config(background="#111111")
 
 x = IntVar()

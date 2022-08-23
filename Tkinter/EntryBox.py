@@ -21,7 +21,6 @@ window = Tk()  # instantiate an instance of a window
 window.title("Phoenix code")
 window.resizable(False, False)
 window.config(padx=10, pady=10)
-window.iconbitmap('./Tkinter/Phoenix.ico')
 
 entry = Entry(
     window,
