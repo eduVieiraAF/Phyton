@@ -8,7 +8,7 @@ def warn(event):
 
 window = Tk()
 window.title("Python coding by Edu")
-window.geometry("460x460")
+window.geometry("250x250+200+250")
 
 window.bind("<Key>", warn)
 
