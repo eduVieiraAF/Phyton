@@ -34,7 +34,7 @@ window.bind("<Left>", move_left)
 window.bind("<Right>", move_right)
 window.bind("<Escape>", ciao)
 
-spaceship = PhotoImage(file="./Tkinter/spaceship.png")
+spaceship = PhotoImage(file="spaceship.png")
 
 label = Label(
     window,
