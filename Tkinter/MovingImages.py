@@ -24,8 +24,8 @@ def move_right(event):
 
 
 window = Tk()
-window.title("Moving objects")
-window.geometry("500x500")
+window.title("Moving an object")
+window.geometry("900x700")
 window.config(bg="black")
 
 window.bind("<Up>", move_up)
@@ -34,7 +34,7 @@ window.bind("<Left>", move_left)
 window.bind("<Right>", move_right)
 window.bind("<Escape>", ciao)
 
-spaceship = PhotoImage(file="spaceship.png")
+spaceship = PhotoImage(file="./Tkinter/spaceship.png")
 
 label = Label(
     window,
