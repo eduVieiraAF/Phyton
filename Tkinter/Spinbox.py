@@ -1,7 +1,7 @@
 from tkinter import *
 
 win = Tk()
-win.geometry('200x100')
+win.geometry('180x100')
 win.config(pady=18, padx=8)
 win.resizable(False, False)
 win.title('Spinbox')
