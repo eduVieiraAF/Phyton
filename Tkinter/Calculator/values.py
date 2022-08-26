@@ -9,8 +9,8 @@ secondary_inverted = "#b04c40"
 secondary_inverted_dark = "#5a2721"
 secondary_inverted_light = "#ccc2bc"
 
-btn_font = "Bookman"
-lbl_font = "Lato"
+btn_font = "Arial"
+lbl_font = "Arial"
 
 btn_height = 1
 btn_width = 3

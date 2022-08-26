@@ -1,9 +1,10 @@
 from tkinter import *
-from tkinter import messagebox
+# from tkinter import messagebox
 
 
 def warn(event):
-    messagebox.showwarning(title="WARNING", message="You've hit the \"{}\" key!".format(event.keysym))
+    # messagebox.showwarning(title="WARNING", message="You've hit the \"{}\" key!".format(event.keysym))
+    print("You've hit the \"{}\" key!".format(event.keysym))
 
 
 window = Tk()

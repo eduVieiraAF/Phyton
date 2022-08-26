@@ -1,7 +1,28 @@
 from tkinter import *
+
 from values import *
 
 expression = ""
+
+
+def key_kp_div(event):
+    press("/")
+
+
+def key_kp_times(event):
+    press("*")
+
+
+def key_kp_sub(event):
+    press("-")
+
+
+def key_kp_add(event):
+    press("+")
+
+
+def key_kp_decimal(event):
+    press(".")
 
 
 def key_kp_1(event):
@@ -113,6 +134,11 @@ calc_window.bind("<KP_7>", key_kp_7)
 calc_window.bind("<KP_8>", key_kp_8)
 calc_window.bind("<KP_9>", key_kp_9)
 calc_window.bind("<KP_0>", key_kp_0)
+calc_window.bind("<KP_Decimal>", key_kp_decimal)
+calc_window.bind("<KP_Add>", key_kp_add)
+calc_window.bind("<KP_Subtract>", key_kp_sub)
+calc_window.bind("<KP_Multiply>", key_kp_times)
+calc_window.bind("<KP_Divide>", key_kp_div)
 
 equation = StringVar()
 equation.set("CALCULATOR")
