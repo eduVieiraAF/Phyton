@@ -1,8 +1,59 @@
 from tkinter import *
-
 from values import *
 
 expression = ""
+
+
+def key_kp_1(event):
+    press("1")
+
+
+def key_kp_2(event):
+    press("2")
+
+
+def key_kp_3(event):
+    press("3")
+
+
+def key_kp_4(event):
+    press("4")
+
+
+def key_kp_5(event):
+    press("5")
+
+
+def key_kp_6(event):
+    press("6")
+
+
+def key_kp_7(event):
+    press("7")
+
+
+def key_kp_8(event):
+    press("8")
+
+
+def key_kp_9(event):
+    press("9")
+
+
+def key_kp_0(event):
+    press("0")
+
+
+def key_kp_enter(event):
+    equal_press()
+
+
+def key_backspace(event):
+    backspace()
+
+
+def key_clear(event):
+    clear()
 
 
 def press(num):
@@ -45,13 +96,26 @@ def invert():
 
 
 calc_window = Tk()
-calc_window.title("Totalizer")
+calc_window.title("myPyCalc")
 calc_window.resizable(False, False)
 calc_window.config(padx=12, pady=12, relief="raised", bd=3, background=primary_light_variant)
-# calc_window.iconbitmap("C:\\Users\\edu_v\\Python\\Tkinter\\Calculator\\Images\\calc.ico")
+
+calc_window.bind("<Escape>", key_clear)
+calc_window.bind("<BackSpace>", key_backspace)
+calc_window.bind("<KP_Enter>", key_kp_enter)
+calc_window.bind("<KP_1>", key_kp_1)
+calc_window.bind("<KP_2>", key_kp_2)
+calc_window.bind("<KP_3>", key_kp_3)
+calc_window.bind("<KP_4>", key_kp_4)
+calc_window.bind("<KP_5>", key_kp_5)
+calc_window.bind("<KP_6>", key_kp_6)
+calc_window.bind("<KP_7>", key_kp_7)
+calc_window.bind("<KP_8>", key_kp_8)
+calc_window.bind("<KP_9>", key_kp_9)
+calc_window.bind("<KP_0>", key_kp_0)
 
 equation = StringVar()
-equation.set("TOTALIZER")
+equation.set("CALCULATOR")
 
 frm_outline = Frame(
     calc_window,
