@@ -10,7 +10,7 @@ msg = Message(
     tk,
     textvariable=var,
     font=25,
-    fg="brown",
+    fg="red",
     relief=GROOVE
 )
 
