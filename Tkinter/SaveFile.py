@@ -11,10 +11,11 @@ def open_file():
             initialdir="/home/eduvieira/IdeaProjects/Python",
             title="Pick a file",
             filetypes=(
-                ("Text files", "*.txt"),
-                ("Word files", "*.doc"),
-                ("Python files", "*.py"),
-                ("HTML files", "*.html"),
+                ("Text file", ".txt"),
+                ("HTML file", ".html"),
+                ("Word file", ".doc"),
+                ("ODF file", "*.odt"),
+                ("Python file", ".py")
             )
         )
 
@@ -22,6 +23,7 @@ def open_file():
         file = open(file_path, 'r')
         text.insert(END, file.read())
         file.close()
+       
 
     except Exception:
         print("no file was open ")
@@ -52,6 +54,7 @@ def save_file():
                                             ("Text file", ".txt"),
                                             ("HTML file", ".html"),
                                             ("Word file", ".doc"),
+                                            ("ODF file", "*.odt"),
                                             ("Python file", ".py")
                                         ])
         if file is None:
