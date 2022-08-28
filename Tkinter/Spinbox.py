@@ -33,12 +33,12 @@ spin_box2 = Spinbox(
 
 button = Button(
     win,
-    text="Click",
+    text="Click here",
     command=get_values
 )
 
 spin_box1.pack(side=LEFT, padx=4)
 spin_box2.pack(side=LEFT, padx=4)
-button.pack()
+button.pack(padx=4)
 
 win.mainloop()

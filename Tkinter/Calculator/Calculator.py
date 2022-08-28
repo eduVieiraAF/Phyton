@@ -139,6 +139,7 @@ calc_window.bind("<KP_Add>", key_kp_add)
 calc_window.bind("<KP_Subtract>", key_kp_sub)
 calc_window.bind("<KP_Multiply>", key_kp_times)
 calc_window.bind("<KP_Divide>", key_kp_div)
+calc_window.bind("<Delete>", key_clear)
 
 equation = StringVar()
 equation.set("CALCULATOR")
