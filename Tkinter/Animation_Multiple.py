@@ -25,7 +25,7 @@ basket_ball = Ball(canvas, 0, 0, 110, X_VELOCITY+1, Y_VELOCITY+5, "#d44500")
 tennis_ball = Ball(canvas, 0, 5, 40, X_VELOCITY, Y_VELOCITY+3, "#aea600")
 soccer_ball = Ball(canvas, 0, 0, 60, X_VELOCITY + 1, Y_VELOCITY + 2, "#515b62")
 marble1 = Ball(canvas, 0, 0, 5, X_VELOCITY+7, Y_VELOCITY+5, "#515b62")
-marble2 = Ball(canvas, 0, 0, 8, X_VELOCITY+3, Y_VELOCITY, "#49b675")
+marble2 = Ball(canvas, 0, 0, 8, X_VELOCITY+3, Y_VELOCITY+2, "#49b675")
 
 while True:    
     big_ball.move()
