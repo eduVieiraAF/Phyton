@@ -9,9 +9,10 @@ var = StringVar()
 msg = Message(
     tk,
     textvariable=var,
-    font=25,
     fg="red",
-    relief=GROOVE
+    font=("Ink Free", 22),
+    relief=RAISED,
+    justify=CENTER
 )
 
 var.set("Displaying messages in a simpler way")
