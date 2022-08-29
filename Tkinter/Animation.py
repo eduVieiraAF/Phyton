@@ -3,7 +3,7 @@ from tkinter import *
 
 WIDTH = 500
 HEIGHT = 500
-X_VELOCITY = 3
+X_VELOCITY = 5
 Y_VELOCITY = 2
 
 window = Tk()
@@ -25,7 +25,7 @@ image_height = spaceship.height()
 
 while True:
     coordinates = canvas.coords(my_image)
-    # print(coordinates)
+    print(coordinates)
 
     if coordinates[0] >= (WIDTH - image_width) or coordinates[0] < 0:
         X_VELOCITY = -X_VELOCITY
