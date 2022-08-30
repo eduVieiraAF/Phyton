@@ -4,7 +4,7 @@ from tkinter import *
 WIDTH = 500
 HEIGHT = 500
 X_VELOCITY = 5
-Y_VELOCITY = 2
+Y_VELOCITY = 3
 
 window = Tk()
 window.title("Animation")
