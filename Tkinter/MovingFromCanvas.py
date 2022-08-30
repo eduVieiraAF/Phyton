@@ -26,13 +26,15 @@ window.bind("<Right>", move_right)
 
 canvas = Canvas(
     window,
-    width=500,
-    height=500,
+    width=700,
+    height=450,
 )
 
 canvas.pack()
 
 image = PhotoImage(file='spaceship.png')
+bg = PhotoImage(file='earth.png')
+my_bg = canvas.create_image(0, 0, image=bg, anchor=NW)
 my_image = canvas.create_image(0, 0, image=image, anchor=NW)
 
 window.mainloop()

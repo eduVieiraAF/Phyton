@@ -1,10 +1,10 @@
 import time
 from tkinter import *
 
-WIDTH = 500
-HEIGHT = 500
+WIDTH = 700
+HEIGHT = 450
 X_VELOCITY = 5
-Y_VELOCITY = 3
+Y_VELOCITY = 4
 
 window = Tk()
 window.title("Animation")
@@ -17,7 +17,10 @@ canvas = Canvas(
 )
 canvas.pack()
 
+earth = PhotoImage(file='earth.png')
 spaceship = PhotoImage(file='spaceship.png')
+
+my_bg = canvas.create_image(0, 0, image=earth, anchor=NW)
 my_image = canvas.create_image(0, 0, image=spaceship, anchor=NW)
 
 image_width = spaceship.width()
@@ -25,7 +28,6 @@ image_height = spaceship.height()
 
 while True:
     coordinates = canvas.coords(my_image)
-    print(coordinates)
 
     if coordinates[0] >= (WIDTH - image_width) or coordinates[0] < 0:
         X_VELOCITY = -X_VELOCITY
