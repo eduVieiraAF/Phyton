@@ -16,7 +16,8 @@ window.bind("<Escape>", esc)
 mb = Menubutton(
     window,
     text="Condiments",
-    relief="groove"
+    relief="raised",
+    width=15
 )
 mb.grid()
 mb.menu = Menu(mb, tearoff=0)
@@ -24,6 +25,7 @@ mb["menu"] = mb.menu
 
 mayoVar = IntVar()
 ketchVar = IntVar()
+mustardVar = IntVar()
 
 mb.menu.add_checkbutton(
     label="Mayo",
@@ -32,6 +34,11 @@ mb.menu.add_checkbutton(
 mb.menu.add_checkbutton(
     label="Ketchup",
     variable=ketchVar
+)
+
+mb.menu.add_checkbutton(
+    label="Mustard",
+    variable=mustardVar
 )
 
 mb.pack()
