@@ -10,6 +10,7 @@ print(reshape1)
 
 print("\nReshape from 1-D to 3-D")
 
+# noinspection PyArgumentList
 reshape2 = arr.reshape(2, 3, 2)  # 2 arrays that contains 3 arrays, each with 2 elements:
 print(reshape2)
 
@@ -20,6 +21,7 @@ print("\nUnknown Dimension")
 # *Pass -1 as the value, and NumPy will calculate this number for you.
 
 arr2 = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+# noinspection PyArgumentList
 reshape3 = arr2.reshape(2, 2, -1)
 print(arr2)
 print(reshape3)
