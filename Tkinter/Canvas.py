@@ -10,7 +10,7 @@ canvas = Canvas(
     bg="black",
 )
 
-image = PhotoImage(file="python.png")
+image = PhotoImage(file="./Tkinter/python.png")
 
 canvas.create_polygon(250, 0, 500, 500, 0, 500, fill="cyan", outline="pink", width=7)
 canvas.create_arc(10, 10, 300, 450, style=PIESLICE, start=180, width=3, outline="green", fill="white", extent=150)
