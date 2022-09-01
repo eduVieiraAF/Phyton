@@ -1,4 +1,3 @@
-
 class Spaceship:
 
     def __init__(self, canvas, x, y, photo, x_velocity, y_velocity, anchor):
