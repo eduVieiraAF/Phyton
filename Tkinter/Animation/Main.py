@@ -25,7 +25,7 @@ alien4 = Spaceship(canvas=canvas, x_velocity=0.50, y_velocity=0.5, x=600, y=40, 
 alien5 = Spaceship(canvas=canvas, x_velocity=10, y_velocity=2, x=600, y=400, photo=photo, anchor=NE)
 alien6 = Spaceship(canvas=canvas, x_velocity=8, y_velocity=5, x=600, y=400, photo=photo, anchor=NE)
 alien6 = Spaceship(canvas=canvas, x_velocity=8, y_velocity=5, x=600, y=400, photo=photo, anchor=NE)
-alien7 = Spaceship(canvas=canvas, x_velocity=7, y_velocity=0.03, x=100, y=200, photo=photo, anchor=NE)
+alien7 = Spaceship(canvas=canvas, x_velocity=7, y_velocity=0.1, x=100, y=200, photo=photo, anchor=NE)
 
 while True:
     alien1.move()

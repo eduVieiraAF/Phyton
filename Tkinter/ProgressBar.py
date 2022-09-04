@@ -19,7 +19,6 @@ def start():
 window = Tk()
 window.title("Python coding by Edu")
 window.config(padx=25, pady=25)
-window.iconbitmap('./Tkinter/python.ico')
 
 percent = StringVar()
 task = StringVar()

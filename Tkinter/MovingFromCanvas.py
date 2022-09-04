@@ -32,8 +32,8 @@ canvas = Canvas(
 
 canvas.pack()
 
-image = PhotoImage(file='spaceship.png')
-bg = PhotoImage(file='earth.png')
+image = PhotoImage(file='./Tkinter/spaceship.png')
+bg = PhotoImage(file='./Tkinter/earth.png')
 my_bg = canvas.create_image(0, 0, image=bg, anchor=NW)
 my_image = canvas.create_image(0, 0, image=image, anchor=NW)
 
