@@ -7,7 +7,7 @@ def do_something(event):
 
 window = Tk()
 window.title("Python coding by Edu")
-window.geometry("460x460")
+window.geometry("760x460")
 
 # window.bind("<Button-1>", do_something) left mouse click
 # window.bind("<Button-2>", do_something) scroll wheel click

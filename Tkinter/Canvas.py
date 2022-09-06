@@ -20,6 +20,9 @@ canvas.create_line(0, 500, 400, 0, fill="red", width=1)
 canvas.create_oval(200, 300, 250, 350, fill="black")
 canvas.create_image(30, 70, image=image, anchor=NW)
 
+points = [150, 100, 150, 120, 240, 280, 210, 100, 150, 250, 100, 300]
+canvas.create_polygon(points, outline = "blue", fill = "orange", width = 3)
+
 canvas.pack()
 
 window.mainloop()
