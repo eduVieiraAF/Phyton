@@ -30,7 +30,6 @@ def edit_paste():
 window = Tk()
 window.title("Python coding by Edu")
 window.geometry("460x460")
-window.iconbitmap('./Tkinter/python.ico')
 
 fire_image = PhotoImage("./Tkinter/fire.png")
 
