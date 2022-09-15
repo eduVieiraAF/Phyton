@@ -23,7 +23,7 @@ def open_file():
         file = open(file_path, 'r')
         text.insert(END, file.read())
         file.close()
-       
+
 
     except Exception:
         print("no file was open ")

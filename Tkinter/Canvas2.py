@@ -3,7 +3,7 @@ from tkinter import *
 canvas_width = 200
 canvas_height = 100
 
-colours = ("#476042", "yellow")
+colours = ("#476042", "#ffeb7a")
 box = []
 
 for ratio in (0.2, 0.35):
@@ -15,9 +15,12 @@ for ratio in (0.2, 0.35):
 master = Tk()
 master.title("3D box")
 
-w = Canvas(master,
-           width=canvas_width,
-           height=canvas_height)
+w = Canvas(
+    master,
+    width=canvas_width,
+    height=canvas_height,
+    bg="white"
+    )
 w.pack()
 
 for i in range(2):

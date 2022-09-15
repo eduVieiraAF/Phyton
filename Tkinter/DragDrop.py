@@ -17,8 +17,7 @@ def drag_motion(event):
 
 window = Tk()
 window.title("Python coding by Edu")
-window.geometry("650x650+300+200")
-window.iconbitmap('./Tkinter/python.ico')
+window.geometry("650x650")
 window.config(padx=3, pady=3)
 
 label = Label(

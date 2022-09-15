@@ -4,6 +4,7 @@ canvas_width = 300
 canvas_height = 80
 
 master = Tk()
+master.title("Bitmap")
 canvas = Canvas(master,
                 width=canvas_width,
                 height=canvas_height)
