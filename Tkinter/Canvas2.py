@@ -19,7 +19,7 @@ w = Canvas(
     master,
     width=canvas_width,
     height=canvas_height,
-    bg="white"
+    bg=colours[1]
     )
 w.pack()
 
