@@ -1,3 +1,4 @@
+from ctypes import alignment
 from tkinter import *
 from tkinter import messagebox
 
@@ -17,9 +18,11 @@ mb = Menubutton(
     window,
     text="Condiments",
     relief="raised",
-    width=15
+    width=15,
+    padx=3,
+    justify="center"
 )
-mb.grid()
+mb.pack()
 mb.menu = Menu(mb, tearoff=0)
 mb["menu"] = mb.menu
 

@@ -33,7 +33,7 @@ window.geometry("460x460")
 
 fire_image = PhotoImage("./Tkinter/fire.png")
 
-menu_bar = Menu(window)
+menu_bar = Menu(window, )
 window.config(menu=menu_bar)
 
 file_menu = Menu(
