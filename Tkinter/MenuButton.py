@@ -1,4 +1,3 @@
-from ctypes import alignment
 from tkinter import *
 from tkinter import messagebox
 
