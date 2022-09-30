@@ -26,6 +26,6 @@ def encrypt(message):
     return cipher
 
 
-result = encrypt("Eduardo".upper())
+result = encrypt(str(input("Enter your message: ")).upper())
 
 print(result)
