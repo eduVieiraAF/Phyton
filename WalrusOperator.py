@@ -33,10 +33,10 @@ while food := input("What food do you like? ").lower() != "quit":
 
 
 sample_data = [
-	{"userId": 1, "name": "rahul", "completed": False},
-	{"userId": 2, "name": "rohit", "completed": False},
-	{"userId": 3, "name": "ram", "completed": False},
-	{"userId": 4, "name": "ravan", "completed": True}
+	{"userId": 1, "name": "Edu", "completed": False},
+	{"userId": 2, "name": "Scott", "completed": False},
+	{"userId": 3, "name": "Cow", "completed": False},
+	{"userId": 4, "name": "Pants", "completed": True}
 ]
 
 print("Without Walrus operator:")
