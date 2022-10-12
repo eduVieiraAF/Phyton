@@ -14,10 +14,10 @@ canvas = Canvas(
 
 canvas.pack()
 
-earth = PhotoImage(file='/home/eduvieira/Dev/Python/Tkinter/earth.png')
+earth = PhotoImage(file='D:\Python\Tkinter\earth.png')
 canvas.create_image(0, 0, image=earth, anchor=NW)
 
-photo = PhotoImage(file='/home/eduvieira/Dev/Python/Tkinter/spaceship.png')
+photo = PhotoImage(file='D:\Python\Tkinter\spaceship.png')
 alien1 = Spaceship(canvas=canvas, x_velocity=3, y_velocity=4, x=0, y=0, photo=photo, anchor=NW)
 alien2 = Spaceship(canvas=canvas, x_velocity=4, y_velocity=1, x=20, y=0, photo=photo, anchor=NW)
 alien3 = Spaceship(canvas=canvas, x_velocity=4, y_velocity=6, x=100, y=100, photo=photo, anchor=NE)
