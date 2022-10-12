@@ -32,6 +32,16 @@ while food := input("What food do you like? ").lower() != "quit":
     foods.append(food)
 
 
+num = 15
+print(num)
+
+print(num := 15)
+
+
+print(num = 15)
+# TypeError
+
+
 sample_data = [
 	{"userId": 1, "name": "Edu", "completed": False},
 	{"userId": 2, "name": "Scott", "completed": False},
