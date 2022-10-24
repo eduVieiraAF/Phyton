@@ -38,7 +38,7 @@ print(num)
 print(num := 15)
 
 
-print(num = 15)
+# print(num = 15)
 # TypeError
 
 

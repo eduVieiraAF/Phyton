@@ -8,7 +8,7 @@ def open_file():
     try:
         # noinspection SpellCheckingInspection
         file_path = filedialog.askopenfilename(
-            initialdir="/home/eduvieira/IdeaProjects/Python",
+            # initialdir="/home/eduvieira/IdeaProjects/Python",
             title="Pick a file",
             filetypes=(
                 ("Text file", ".txt"),
@@ -48,7 +48,7 @@ def save_file():
 
     else:
         # noinspection SpellCheckingInspection
-        file = filedialog.asksaveasfile(initialdir="/home/eduvieira/IdeaProjects/Python",
+        file = filedialog.asksaveasfile(#initialdir="/home/eduvieira/IdeaProjects/Python",
                                         title="Save this file",
                                         filetypes=[
                                             ("Text file", ".txt"),
@@ -70,9 +70,9 @@ window = Tk()
 window.title("Python Notes Program")
 window.bind("<Escape>", esc_quit)
 
-save_icon = PhotoImage(file="./Tkinter/save.png")
-paint_icon = PhotoImage(file="./Tkinter/paint.png")
-open_icon = PhotoImage(file="./Tkinter/open.png")
+save_icon = PhotoImage(file="save.png")
+paint_icon = PhotoImage(file="paint.png")
+open_icon = PhotoImage(file="open.png")
 
 text = Text(
     window,
