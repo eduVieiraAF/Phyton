@@ -50,7 +50,7 @@ def quit_pad():
 window = Tk()
 window.title("MyPyPad")
 window.geometry("850x600")
-window.config(padx=12, pady=12)
+window.config(padx=6, pady=12)
 
 file = None
 font_name = StringVar(window)
@@ -61,9 +61,7 @@ font_size.set("16")
 text_area = Text(
     window,
     relief=SUNKEN,
-    font=(font_name.get(), int(font_size.get()) - 2),
-    pady=2,
-    padx=2
+    font=(font_name.get(), int(font_size.get()) - 2)
 )
 
 scroll_bar = Scrollbar(text_area)
@@ -84,9 +82,9 @@ colour_button = Button(
     command=change_color,
     font=(font_name.get(), font_size.get()),
     padx=2,
-    pady=2
+    pady=2,
 )
 
-colour_button.grid(row=0, column=0)
+colour_button.grid(row=0, column=0, pady=8)
 
 window.mainloop()
