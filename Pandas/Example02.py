@@ -5,7 +5,7 @@ my_data = pd.Series(my_dataset)
 print(my_data)
 print(my_data[1])
 
-my_data2 = pd.Series(my_dataset, index= ["a", "b", "c", "d"]) # labels
+my_data2 = pd.Series(my_dataset, index=["a", "b", "c", "d"])  # labels
 print(my_data2)
 print(my_data2[2])
 
