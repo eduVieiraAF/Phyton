@@ -85,6 +85,26 @@ colour_button = Button(
     pady=2,
 )
 
+save_button = Button(
+    frame,
+    text="Save",
+    command=save_file,
+    font=(font_name.get(), font_size.get()),
+    padx=2,
+    pady=2,
+)
+
+open_button = Button(
+    frame,
+    text="Save",
+    command=open_file,
+    font=(font_name.get(), font_size.get()),
+    padx=2,
+    pady=2,
+)
+
 colour_button.grid(row=0, column=0, pady=8)
+save_button.grid(row=0, column=1, pady=8)
+open_button.grid(row=0, column=2, pady=8)
 
 window.mainloop()
