@@ -1,5 +1,5 @@
-#? Data frame
-#* It's a 2 dimensional data structure
+# ? Data frame
+# * It's a 2 dimensional data structure
 
 import pandas as pd
 
@@ -15,12 +15,11 @@ print(data_frame)
 print(data_frame.loc[0])
 
 # returning row 0 and 1
-print(data_frame.loc[[0,1]])
+print(data_frame.loc[[0, 1]])
 
 # named indexes
-indexed_data = pd.DataFrame(data, index = ["day1", "day2", "day3"])
+indexed_data = pd.DataFrame(data, index=["day1", "day2", "day3"])
 print(indexed_data)
 
 # locating named indexes
 print(indexed_data.loc["day3"])
-

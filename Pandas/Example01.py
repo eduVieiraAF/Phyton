@@ -23,4 +23,3 @@ my_dataset = {"data": [{"color": "#f1e05a", "name": "JavaScript", "percent": 42.
 my_data = pd.DataFrame(my_dataset)
 print(pd.__version__)
 print(my_data)
-
