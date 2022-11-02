@@ -6,7 +6,7 @@ from tkinter.ttk import *
 def start():
     tasks = 500
     x = 0
-    speed = 3
+    speed = 6
     while x < tasks:
         time.sleep(0.05)
         pb['value'] += (speed / tasks) * 100
