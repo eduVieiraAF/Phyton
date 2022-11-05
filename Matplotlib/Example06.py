@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-y_point = np.array([3, -8, 2, -10, 25, -69])
+y_point = np.array([3, -80, 2, -10, 25, -269])
 
-plt.plot(y_point, marker='_')
+plt.plot(y_point, marker='o')
 plt.show()
 
 # * MARKERS
