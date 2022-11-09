@@ -15,6 +15,8 @@ notebook.add(tab2, text="Tab #2")
 
 notebook.pack(expand=True, fill="both")
 
+Button(tab2, text="Hello").pack()
+
 Label(tab1, text="Hello, Tab #1", width=50, height=25).pack()
 Label(tab2, text="Hello, Tab #2", width=50, height=25).pack()
 
