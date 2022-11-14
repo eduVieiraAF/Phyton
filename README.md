@@ -1,6 +1,6 @@
 <img src="https://www.python.org/static/img/python-logo.png" width="280" height="100"/>
 
-## Why not add Python?
+# [Python](https://www.python.org)
 
 ### This time I'm using VS Code instead of Intellij so that I can get used to another IDE.
 
