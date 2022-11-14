@@ -96,7 +96,7 @@ save_button = Button(
 
 open_button = Button(
     frame,
-    text="Save",
+    text="Open",
     command=open_file,
     font=(font_name.get(), font_size.get()),
     padx=2,
