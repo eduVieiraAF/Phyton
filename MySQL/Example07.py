@@ -7,7 +7,8 @@ command = "SELECT name, age from users"
 
 my_cursor = myDB.cursor()
 my_cursor.execute(command)
-query = my_cursor.fetchmany()
+query = my_cursor.fetchall()
+# query = my_cursor.fetchmany()
 # query = my_cursor.fetchone()
 
 my_users = []
