@@ -3,7 +3,7 @@
 from Info import myDB
 
 # command = "SELECT * from users"
-command = "SELECT name, age from users"
+command = "SELECT name, age FROM users"
 
 my_cursor = myDB.cursor()
 my_cursor.execute(command)
