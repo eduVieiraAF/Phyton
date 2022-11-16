@@ -45,3 +45,11 @@ my_doc = my_collection.find(my_query)
 
 for x in my_doc:
     print(x)
+
+print()
+
+# limiting a query
+my_query = my_collection.find().limit(3)
+
+for x in my_query:
+    print(x)
