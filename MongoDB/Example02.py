@@ -6,4 +6,4 @@ if "PyDatabase" in db_list:
     print("Database found")
 
 else:
-    print("ERROR: {1→ database not found or is empty}")
+    print("ERROR: {→ database not found or is empty}")
