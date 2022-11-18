@@ -1,3 +1,4 @@
+
 # ? They are functions that either accept a function as an argument(1) or return a function(2).
 # * In Python, functions are also treated as objects.
 
