@@ -10,7 +10,7 @@ np.random.seed(3)
 x = 0.5 + np.arange(8)
 y = np.random.uniform(2, 7, len(x))
 
-fig, ax = plt.subplots()
+ax = plt.subplot()
 
 ax.stem(x, y)
 ax.set(
