@@ -6,7 +6,7 @@ store = [("shirt", 15.00),
          ("jacket", 50.00),
          ("socks", 5.00)]
 
-USD_to_Real = lambda data: (data[0], (data[1] * 5) * 1.25)  # Converting to price of products to Euro
+USD_to_Real = lambda data: (data[0], (data[1] * 3.6) * 1.25)  # Converting to price of products to Real
 # function, iterable
 store_real_price = list(map(USD_to_Real, store))
 
