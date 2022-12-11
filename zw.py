@@ -1,62 +1,62 @@
+import random
+import string
 from tkinter import *
 from tkinter import messagebox
 
-morse_code_dict = {
-    'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.',
-    'F': '..-.', 'G': '--.', 'H': '....', 'I': '..', 'J': '.---',
-    'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---',
-    'P': '.--.', 'Q': '--.-', 'R': '.-.', 'S': '...', 'T': '-',
-    'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-', 'Y': '-.--',
-    'Z': '--..', '1': '.----', '2': '..---', '3': '...--', '4': '....-',
-    '5': '.....', '6': '-....', '7': '--...', '8': '---..', '9': '----.',
-    '0': '-----', ', ': '--..--', '.': '.-.-.-', '?': '..--..',
-    '/': '-..-.', '-': '-....-', '(': '-.--.', ')': '-.--.-'
-}
+from PIL import Image, ImageTk
 
+chars = list(string.ascii_lowercase + string.ascii_uppercase +
+             string.digits + "!@#$%&*_-.")
+password = []
+random.shuffle(chars)
 
-def encrypt(message):
-    cipher = ""
+for i in range(0, 8):
+    password.append(random.choice(chars))
 
-    for letter in message:
-        if letter != " ":
-            cipher += morse_code_dict[letter] + " "
-
-        else:
-            cipher += " "
-
-    return cipher
+print("".join(password))
 
 
 def send():
-    string = entry.get()
-    code = encrypt(str(string.upper()))
-    messagebox.showinfo(title="Encryption", message=code)
-    entry.delete(0, END)
+    especial_chars = list(string.ascii_lowercase + string.ascii_uppercase + string.digits + "!@#$%&*_-.")
+    temp_password = []
+    random.shuffle(especial_chars)
+
+    for i in range(0, 12):
+        temp_password.append(random.choice(especial_chars))
+
+    print("".join(temp_password))
+
+    messagebox.showinfo(
+        title="PASSWORD", message="Temporary temp_password \n {}".format("".join(temp_password)))
 
 
-window = Tk()
-window.title("Phoenix code")
-window.resizable(False, False)
-window.config(padx=10, pady=10)
+master = Tk()
+master.config(pady=5, padx=10)
 
-# string =StringVar()
+photo = Image.open('./Tkinter/Code.png')
+photo_sized = photo.resize((160, 160))
+my_photo = ImageTk.PhotoImage(photo_sized)
 
-entry = Entry(
-    window,
-    width=45,
-    font=("Arial", 23),
-    foreground="#82c59c",
-    background="#3d3d3e",
-    borderwidth=3,
-    justify=CENTER,
+label = Label(
+    master,
+    image=my_photo,
+    relief=RAISED,
 )
 
-send_btn = Button(
-    window,
-    text="SUBMIT",
-    command=send)
+entry = Entry(
+    master,
+    width=40,
+    justify=CENTER
+)
 
-entry.pack(side=LEFT, padx=4)
-send_btn.pack(side=RIGHT, padx=4)
+button = Button(
+    master,
+    text="REGISTER",
+    command=send
+)
 
-window.mainloop()
+label.grid(row=0, column=0, columnspan=2, pady=8)
+entry.grid(row=1, column=0, pady=8, padx=3)
+button.grid(row=1, column=1, pady=8, padx=3)
+
+master.mainloop()

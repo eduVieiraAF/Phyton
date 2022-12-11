@@ -1,4 +1,5 @@
-# Python Program to translate string into morse code:
+from tkinter import *
+from tkinter import messagebox
 
 morse_code_dict = {
     'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.',
@@ -26,6 +27,36 @@ def encrypt(message):
     return cipher
 
 
-result = encrypt(str(input("Enter your message: ")).upper())
+def send():
+    string = entry.get()
+    code = encrypt(str(string.upper()))
+    messagebox.showinfo(title="Encryption", message=code)
+    entry.delete(0, END)
 
-print(result)
+
+window = Tk()
+window.title("Phoenix code")
+window.resizable(False, False)
+window.config(padx=10, pady=10)
+
+# string =StringVar()
+
+entry = Entry(
+    window,
+    width=45,
+    font=("Arial", 23),
+    foreground="#82c59c",
+    background="#3d3d3e",
+    borderwidth=3,
+    justify=CENTER,
+)
+
+send_btn = Button(
+    window,
+    text="SUBMIT",
+    command=send)
+
+entry.pack(side=LEFT, padx=4)
+send_btn.pack(side=RIGHT, padx=4)
+
+window.mainloop()
