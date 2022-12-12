@@ -27,7 +27,7 @@ def send():
     print("".join(temp_password))
 
     messagebox.showinfo(
-        title="PASSWORD", message="Temporary temp_password \n {}".format("".join(temp_password)))
+        title="Login", message="Temporary password {}".format("".join(temp_password)))
 
 
 master = Tk()
