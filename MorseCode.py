@@ -31,6 +31,7 @@ def send():
     string = entry.get()
     code = encrypt(str(string.upper()))
     messagebox.showinfo(title="Encryption", message=code)
+    print(code)
     entry.delete(0, END)
 
 

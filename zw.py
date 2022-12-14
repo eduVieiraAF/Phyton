@@ -5,6 +5,7 @@ from tkinter import messagebox
 
 from PIL import Image, ImageTk
 
+
 chars = list(string.ascii_lowercase + string.ascii_uppercase +
              string.digits + "!@#$%&*_-.")
 password = []
