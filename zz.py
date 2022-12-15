@@ -1,15 +1,10 @@
-import smtplib
+import requests
 
-sender = "Private Person <from@example.com>"
-receiver = "A Test User <to@example.com>"
+url = "https://api.exchangeratesapi.io/latest?base=USD&symbols=BRL"
 
-message = f"""\
-Subject: Hi Mailtrap
-To: {receiver}
-From: {sender}
+response = requests.get(url)
 
-This is a test e-mail message."""
+# Parse the response JSON to extract the exchange rate
+rate = response.json()
 
-with smtplib.SMTP("smtp.mailtrap.io", 2525) as server:
-    server.login("2ec53c71b252f5", "7c8e4d55a6dd41")
-    server.sendmail(sender, receiver, message)
+print("The current exchange rate for the US dollar is:", rate)
