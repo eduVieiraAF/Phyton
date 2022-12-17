@@ -9,6 +9,6 @@ levels = np.linspace(Z.min(), Z.max(), 7)
 
 fig, ax = plt.subplots()
 
-ax.contour(X, Y, Z, levels=levels)
+ax.contourf(X, Y, Z, levels=levels)
 
 plt.show()
