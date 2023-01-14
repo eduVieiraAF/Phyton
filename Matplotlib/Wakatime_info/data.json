@@ -3,37 +3,102 @@
       {
         "color": "#F18E33",
         "name": "Kotlin",
-        "percent": 74.95
+        "percent": 51.88
       },
       {
         "color": "#3581ba",
         "name": "Python",
-        "percent": 23.67
+        "percent": 24.74
+      },
+      {
+        "color": "#31859c",
+        "name": "TypeScript",
+        "percent": 11.27
       },
       {
         "color": "#16ce40",
-        "name": "GitIgnore file",
-        "percent": 0.52
+        "name": "XML",
+        "percent": 3.82
+      },
+      {
+        "color": "#c6538c",
+        "name": "SCSS",
+        "percent": 3.58
+      },
+      {
+        "color": "#e44b23",
+        "name": "HTML",
+        "percent": 2.78
+      },
+      {
+        "color": "#b07219",
+        "name": "Java",
+        "percent": 0.88
+      },
+      {
+        "color": "#dc9658",
+        "name": "JSON",
+        "percent": 0.45
       },
       {
         "color": "#e69f56",
         "name": "Groovy",
-        "percent": 0.42
-      },
-      {
-        "color": "#dc9658",
-        "name": "XML",
-        "percent": 0.34
+        "percent": 0.24
       },
       {
         "color": "#d62728",
-        "name": "Gradle",
-        "percent": 0.08
+        "name": "GitIgnore file",
+        "percent": 0.14
+      },
+      {
+        "color": "#083fa1",
+        "name": "Markdown",
+        "percent": 0.11
+      },
+      {
+        "color": "#563d7c",
+        "name": "CSS",
+        "percent": 0.04
       },
       {
         "color": "#9467bd",
+        "name": "Gradle",
+        "percent": 0.02
+      },
+      {
+        "color": "#8c564b",
         "name": "Properties",
+        "percent": 0.02
+      },
+      {
+        "color": "#aec7e8",
+        "name": "Git",
         "percent": 0.01
+      },
+      {
+        "color": "#e377c2",
+        "name": "CSV",
+        "percent": 0.01
+      },
+      {
+        "color": "#f7b6d2",
+        "name": "Text",
+        "percent": 0.01
+      },
+      {
+        "color": "#f1e05a",
+        "name": "JavaScript",
+        "percent": 0.01
+      },
+      {
+        "color": "#1f9aef",
+        "name": "Other",
+        "percent": 0.0
+      },
+      {
+        "color": "#7f7f7f",
+        "name": "PythonStub",
+        "percent": 0.0
       }
     ]
   }
