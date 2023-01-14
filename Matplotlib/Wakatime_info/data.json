@@ -1,0 +1,39 @@
+{
+    "data": [
+      {
+        "color": "#F18E33",
+        "name": "Kotlin",
+        "percent": 74.95
+      },
+      {
+        "color": "#3581ba",
+        "name": "Python",
+        "percent": 23.67
+      },
+      {
+        "color": "#16ce40",
+        "name": "GitIgnore file",
+        "percent": 0.52
+      },
+      {
+        "color": "#e69f56",
+        "name": "Groovy",
+        "percent": 0.42
+      },
+      {
+        "color": "#dc9658",
+        "name": "XML",
+        "percent": 0.34
+      },
+      {
+        "color": "#d62728",
+        "name": "Gradle",
+        "percent": 0.08
+      },
+      {
+        "color": "#9467bd",
+        "name": "Properties",
+        "percent": 0.01
+      }
+    ]
+  }
