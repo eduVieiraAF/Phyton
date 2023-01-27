@@ -5,3 +5,6 @@
 ### This time I'm using VS Code instead of Intellij so that I can get used to another IDE.
 
 - This repository is a like a notebook so that I can learn a little bit of Python.
+
+
+[![wakatime](https://wakatime.com/badge/github/eduVieiraAF/Python.svg)](https://wakatime.com/badge/github/eduVieiraAF/Python)
