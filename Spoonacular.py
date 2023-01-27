@@ -9,7 +9,7 @@ endpoint = "https://api.spoonacular.com/recipes/findByIngredients"
 # Set the parameters for the API call
 params = {
     "apiKey": api_key,
-    "ingredients": "sausage",
+    "ingredients": "bacon",
 }
 
 response = requests.get(endpoint, params=params)

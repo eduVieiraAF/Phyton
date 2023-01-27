@@ -1,18 +1,24 @@
-import http.client
+import requests
+import json
 
-conn = http.client.HTTPSConnection("investing-cryptocurrency-markets.p.rapidapi.com")
+url = "https://investing-cryptocurrency-markets.p.rapidapi.com/coins/list"
+
 
 headers = {
-    'X-RapidAPI-Key': "5375f1194amshb057f0fe5663137p14cc2bjsna7ae5ec520d1",
-    'X-RapidAPI-Host': "investing-cryptocurrency-markets.p.rapidapi.com"
-    }
+'X-RapidAPI-Key': "5375f1194amshb057f0fe5663137p14cc2bjsna7ae5ec520d1",
+'X-RapidAPI-Host': "investing-cryptocurrency-markets.p.rapidapi.com"
+}
 
-conn.request("GET", "/coins/list?edition_currency_id=12&time_utc_offset=28800&lang_ID=1&sort=PERC1D_DN&page=1", headers=headers)
+response = requests.request("GET", url, headers=headers)
 
-res = conn.getresponse()
-data = res.read()
+data = response.json()
 
-print(data.decode("utf-8"))
+list = data["data"][0]
 
+crypto = list["screen_data"]["crypto_data"]
 
+btc = crypto[0]
 
+print(btc["name"])
+print(btc["inst_price_usd"])
+print(btc["logo_url"])
