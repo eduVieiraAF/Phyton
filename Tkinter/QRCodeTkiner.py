@@ -32,7 +32,7 @@ def show_qr_code():
         filename = "temp_qrcode.png"
         generate_qr_code(data, filename)
         img = Image.open(filename)
-        img = img.resize((300, 300), Image.ANTIALIAS)
+        img = img.resize((300, 300))
         img = ImageTk.PhotoImage(img)
         qr_label.config(image=img)
         qr_label.image = img
@@ -51,20 +51,17 @@ label = tk.Label(
 
 entry = tk.Entry(root)
 
-
 save_button = tk.Button(root, text="Save QR Code", command=save_qr_code)
 
-
 show_button = tk.Button(root, text="Show QR Code", command=show_qr_code)
-
 
 qr_label = tk.Label(root)
 
 
 label.pack()
-entry.pack(pady=8)
+entry.pack(pady=4)
 save_button.pack(pady=4)
 show_button.pack(pady=4)
-qr_label.pack(pady=8)
+qr_label.pack(pady=4)
 
 root.mainloop()

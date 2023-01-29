@@ -16,7 +16,7 @@ window.config(background="#111111")
 
 x = IntVar()
 
-py = PhotoImage(file='python.png')
+py = PhotoImage(file='./Tkinter/python.png')
 
 check_button = Checkbutton(
     window,
