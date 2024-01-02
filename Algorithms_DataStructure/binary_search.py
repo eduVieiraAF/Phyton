@@ -27,10 +27,11 @@ def verify(index):
     else:
         print("Target not found in list")
 
-nummbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+sorted_list = sorted(numbers)
 
-result = binary_search(nummbers.sort(), 12)
+result = binary_search(sorted_list, 12)
 verify(result)
 
-result = binary_search(nummbers, 3)
+result = binary_search(sorted_list, 3)
 verify(result)
