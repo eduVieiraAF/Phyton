@@ -33,7 +33,7 @@ def save_file():
             file.write(text_area.get(1.0, END))
     
         except Exception:
-            showerror(title="ERROR", message="Could not save file.")
+            showwarning(title="INFO", message="Did not save file.")
     
         finally:
             file.close()
@@ -51,8 +51,9 @@ def open_file():
         file = open(file, "r")
         text_area.insert(1.0, file.read())
     
-    except Exception:
-        showerror(title="ERROR", message="Could not open file")
+    except Exception as e:
+        showinfo(title="INFO", message="Did not open file")
+        print(e)
     
     finally:
         file.close()
