@@ -1,3 +1,6 @@
+from functools import reduce
+
+
 add10 = lambda x: x + 10
 print(add10(5))
 
@@ -39,3 +42,12 @@ print(b)
 # alternatively
 c = [x for x in a if x%2 == 0]
 print(c)
+
+# reduce(function, sequence)
+
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# reduce() applies a function to an iterable and reduce it to a single cumulative value.
+# The lambda function used here takes two items and returns their sum.
+# The results are then collected into a new list 'b'.
+b = reduce(lambda x, y: x + y, a)
+print(b)
